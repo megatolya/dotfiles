@@ -1,4 +1,5 @@
-configs
-=======
+#Мои настройки
 
-my configs
+```
+brew install ack
+```
