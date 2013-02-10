@@ -1,11 +1,13 @@
+let mapleader = "," " мапим <Leader> на запятую. По умолчанию <Leader> это обратный слэш
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
 set hidden
-let mapleader = "," " мапим <Leader> на запятую. По умолчанию <Leader> это обратный слэш 
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on
-set nonumber        " always show line numbers
+set number        " always show line numbers
 set shiftwidth=4  " number of spaces to use for autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
@@ -34,15 +36,18 @@ filetype off " обязательно!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'git://github.com/gmarik/vundle.git'
+Bundle 'git://github.com/ervandew/supertab.git'
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/scrooloose/nerdtree.git'
 Bundle 'git://github.com/pangloss/vim-javascript.git'
 Bundle 'git://github.com/walm/jshint.vim.git'
 Bundle 'git://github.com/digitaltoad/vim-jade.git'
 Bundle  'snipMate'
+Bundle 'surround'
 Bundle  'git://github.com/motemen/git-vim.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
+Bundle 'git://github.com/xolox/vim-session.git'
 filetype plugin indent on     " required!
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -53,6 +58,7 @@ set listchars=tab:\ \ ,trail:.
 set laststatus=2   " всегда показывать строку статуса
 set statusline=%f%m%r%h%w\ %y\ enc:%{&enc}\ ff:%{&ff}\ fenc:%{&fenc}%=(ch:%3b\ hex:%2B)\ col:%2c\ line:%2l/%L\ [%2p%%]
 set shm+=I
+nmap <Leader>re :edit<cr>
 " Fix Trailing White Space
 map <leader>ts :%s/\s\+$//e<CR>
 " ,bl show buffers
@@ -61,7 +67,6 @@ nmap <Leader>bl :ls<cr>:b
 nmap <Leader>bp :bp<cr>
 " ,bn next buffer
 nmap <Leader>bn :bn<cr>
-
 nmap <Leader>pp :set paste<cr>
 nmap <Leader>np :set nopaste<cr>
 nmap <Leader>bd :bdelete<cr>
@@ -110,6 +115,9 @@ set statusline+=\ \ %3.9(%l/%L%) " line / total lines
 "set statusline+=\ \ %2.3p%% " percentage through file in lines
 set statusline+=\ \ %{FileSize()}
 set statusline+=%< " where truncate if line too long
+
+"""""
+
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
  " Переключение вкладки по табу
 nmap <Tab> gt
@@ -134,3 +142,5 @@ function! ToggleMouse()
     endif
 endfunction
 nnoremap <leader>m :call ToggleMouse()<CR>
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
