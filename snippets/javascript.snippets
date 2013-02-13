@@ -1,4 +1,9 @@
-
+#logger
+snippet log
+	self._logger.debug(${1:});
+#logger json
+snippet logjs
+	self._logger.debug(JSON.stringify(${1:}), null, '  ');
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
