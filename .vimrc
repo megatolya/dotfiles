@@ -43,13 +43,12 @@ set visualbell
 set noerrorbells
 set nobackup
 set noswapfile
-set mouse=a
+set mouse=
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set list
 set listchars=tab:\ \ ,trail:.
 set laststatus=2
-set statusline= file:%{&ff}\ col:%2c\ line:%2l/%L\ 
 set shm+=I
 set expandtab
 

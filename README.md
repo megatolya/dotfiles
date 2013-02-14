@@ -1,5 +1,5 @@
 #Мои настройки
-
+В настройках поменять скорость отклика клавиатуры на максимальную
 ```
 brew install ack
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
