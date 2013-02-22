@@ -78,3 +78,18 @@ nmap <Leader><up> :leftabove new<CR>
 nmap <Leader><down> :rightbelow new<CR>
 command! Q q
 command! W w
+
+" Warning: nightmare mode!
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+" Позволяем передвигаться с помощью hjkl в Insert mode зажав <Ctrl>
+imap <C-h> <C-o>h
+imap <C-j> <C-o>j
+imap <C-k> <C-o>k
+imap <C-l> <C-o>l
