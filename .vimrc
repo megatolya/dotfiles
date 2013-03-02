@@ -15,12 +15,15 @@ Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/xolox/vim-session.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
 Bundle 'git://github.com/tomasr/molokai.git'
+Bundle 'git://github.com/majutsushi/tagbar.git'
 filetype plugin indent on
 syntax enable
 "===================
 let mapleader = ","
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
+let g:tagbar_autoclose = 1
+let g:tagbar_autofocus = 1
 colorscheme molokai
 set hidden
 set wrap
@@ -72,6 +75,8 @@ nmap <Leader>tn :tabnew<cr>
         endif
 nmap <Tab> gt
 nmap <S-Tab> gT
+nmap <Leader>. :TagbarToggle<CR>
+nmap <Leader>m :CtrlPTag<CR>
 nmap <Leader><left> :leftabove vnew<CR>
 nmap <Leader><right> :rightbelow vnew<CR>
 nmap <Leader><up> :leftabove new<CR>
@@ -94,7 +99,6 @@ imap <C-j> <C-o>j
 imap <C-k> <C-o>k
 imap <C-l> <C-o>l
 
-map ё `
 map й q
 map ц w
 map у e
