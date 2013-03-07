@@ -24,7 +24,8 @@ let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
-colorscheme molokai
+"colorscheme molokai
+colorscheme xoria256
 set hidden
 set wrap
 set tabstop=4
@@ -54,7 +55,7 @@ set listchars=tab:\ \ ,trail:.
 set laststatus=2
 set shm+=I
 set expandtab
-
+set t_Co=256
 nmap <Bs> :NERDTreeToggle<CR>
 nmap <Leader>re :edit<cr>
 nmap <leader>ts :%s/\s\+$//e<CR>
@@ -83,7 +84,11 @@ nmap <Leader><up> :leftabove new<CR>
 nmap <Leader><down> :rightbelow new<CR>
 command! Q q
 command! W w
-
+" Переключение по сплитам
+nmap <C-h> <C-W>h
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-l> <C-W>l
 " Warning: nightmare mode!
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
