@@ -16,6 +16,8 @@ Bundle 'git://github.com/xolox/vim-session.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
 Bundle 'git://github.com/tomasr/molokai.git'
 Bundle 'git://github.com/majutsushi/tagbar.git'
+Bundle 'git://github.com/tpope/vim-surround.git'
+Bundle 'git://github.com/tpope/vim-repeat.git'
 filetype plugin indent on
 syntax enable
 "===================
@@ -56,12 +58,16 @@ set laststatus=2
 set shm+=I
 set expandtab
 set t_Co=256
+" Y янкает от курсора и до конца строки. На манер страндартных D и С.
+nnoremap Y y$
+" Не показывать парную скобку
+let loaded_matchparen=1 " перестает прыгать на парную скобку,
+set noshowmatch " Не показывать парные <> в HTML
 nmap <Bs> :NERDTreeToggle<CR>
+map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
 nmap <Leader>re :edit<cr>
 nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
-nmap <Leader>bp :bp<cr>
-nmap <Leader>bn :bn<cr>
 nmap <Leader>pp :set paste<cr>
 nmap <Leader>np :set nopaste<cr>
 nmap <Leader>bd :bdelete<cr>
@@ -84,6 +90,10 @@ nmap <Leader><up> :leftabove new<CR>
 nmap <Leader><down> :rightbelow new<CR>
 command! Q q
 command! W w
+
+" open nerdtree on start
+autocmd vimenter * if !argc() | NERDTree | endif
+let NERDTreeShowHidden=1
 " Переключение по сплитам
 nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
