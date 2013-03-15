@@ -20,10 +20,11 @@ filetype plugin indent on
 syntax enable
 "===================
 let mapleader = ","
-let g:session_autoload = 'yes'
-let g:session_autosave = 'yes'
-let g:tagbar_autoclose = 1
-let g:tagbar_autofocus = 1
+"let g:session_autoload = 'yes'
+"let g:session_autosave = 'yes'
+"let g:tagbar_autoclose = 1
+"let g:tagbar_autofocus = 1
+let NERDTreeShowHidden=1
 colorscheme xoria256
 set hidden
 set wrap
@@ -45,7 +46,6 @@ set visualbell
 set noerrorbells
 set nobackup
 set noswapfile
-set mouse=
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set list
@@ -54,11 +54,6 @@ set laststatus=2
 set shm+=I
 set expandtab
 set t_Co=256
-" Y янкает от курсора и до конца строки. На манер страндартных D и С.
-nnoremap Y y$
-" Не показывать парную скобку
-let loaded_matchparen=1 " перестает прыгать на парную скобку,
-set showmatch
 nmap <Bs> :NERDTreeToggle<CR>
 map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
 nmap <Leader>re :edit<cr>
@@ -87,10 +82,10 @@ nmap <Leader><down> :rightbelow new<CR>
 
 command! Q q
 command! W w
+nnoremap Y y$
 
 " open nerdtree on start
 autocmd vimenter * if !argc() | NERDTree | endif
-let NERDTreeShowHidden=1
 " Переключение по сплитам
 nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
