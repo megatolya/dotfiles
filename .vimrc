@@ -27,6 +27,9 @@ set ttyfast
 set scrolloff=6
 set sidescrolloff=6
 
+set nocursorcolumn
+set nocursorline
+
 set hidden
 set wrap
 set tabstop=4
