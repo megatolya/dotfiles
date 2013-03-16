@@ -56,9 +56,7 @@ set fileencodings=utf-8,cp1251
 set list
 set listchars=tab:\ \ ,trail:.
 set laststatus=2
-set statusline=%f%h\ %y\ %m\ %r\ %{&encoding}\ 
-set statusline+=%=Line:%l/%L[%p%%]\ Col:%c\ [%b][0x%B]
-set statusline+=\ Buf:%n\ 
+
 set shm+=I
 
 set expandtab
