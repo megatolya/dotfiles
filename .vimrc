@@ -44,7 +44,7 @@ set ignorecase
 set smartcase
 set smarttab
 set hlsearch
-set incsearch 
+set incsearch
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title
@@ -86,10 +86,12 @@ nmap <Leader><left> :leftabove vnew<CR>
 nmap <Leader><right> :rightbelow vnew<CR>
 nmap <Leader><up> :leftabove new<CR>
 nmap <Leader><down> :rightbelow new<CR>
+nmap <Leader>a :Ack
+map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
 
 command! Q q
 command! W w
-nnoremap Y y$
+snoremap Y y$
 
 " Переключение по сплитам
 nmap <C-h> <C-W>h

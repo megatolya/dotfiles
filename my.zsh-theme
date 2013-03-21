@@ -6,4 +6,4 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}⚡%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 PROMPT='%{$fg[cyan]%}%1~%{$reset_color%}%{$fg[blue]%}|%{$reset_color%}$(git_prompt_info)%{$reset_color%} 
- '
+$ '
