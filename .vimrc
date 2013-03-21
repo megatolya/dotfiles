@@ -65,7 +65,7 @@ set t_Co=256
 
 nmap <Bs> :NERDTreeToggle<CR>
 map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
-nmap <Leader>re :edit<cr>
+nmap <Leader>re :edit!<cr>
 nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
 nmap <Leader>bd :bdelete<cr>
