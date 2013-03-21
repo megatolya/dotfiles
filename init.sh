@@ -1,4 +1,6 @@
 ln -s /usr/bin/vim /usr/bin/e
+mkdir -p ~/.zsh/func
+ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" ~/.zsh/func/_brew
 brew install ack
 brew install ctags
 npm install jsctags
