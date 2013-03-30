@@ -119,3 +119,5 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+# disable dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean YES
