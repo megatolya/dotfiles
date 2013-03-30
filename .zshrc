@@ -11,5 +11,5 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -al'
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/workspace/vb/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/workspace/vb/bin:~/usr/local/
 export PATH=/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH

@@ -16,7 +16,9 @@ Bundle 'git://github.com/kien/ctrlp.vim.git'
 Bundle 'git://github.com/tpope/vim-surround.git'
 Bundle 'git://github.com/tpope/vim-repeat.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
-Bundle 'c.vim'
+Bundle 'git://github.com/flomotlik/vim-livereload.git'
+Bundle 'template.vim'
+Bundle 'git://github.com/evindor/vim-rusmode.git'
 filetype plugin indent on
 syntax enable
 "===================
