@@ -16,6 +16,9 @@ Bundle 'git://github.com/kien/ctrlp.vim.git'
 Bundle 'git://github.com/tpope/vim-surround.git'
 Bundle 'git://github.com/tpope/vim-repeat.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+Bundle 'git://github.com/flomotlik/vim-livereload.git'
+Bundle 'template.vim'
+Bundle 'git://github.com/evindor/vim-rusmode.git'
 filetype plugin indent on
 syntax enable
 "===================
@@ -64,7 +67,7 @@ set t_Co=256
 
 nmap <Bs> :NERDTreeToggle<CR>
 map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
-nmap <Leader>re :edit<cr>
+nmap <Leader>re :edit!<cr>
 nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
 nmap <Leader>bd :bdelete<cr>
