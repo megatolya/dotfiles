@@ -13,3 +13,5 @@ alias ll='ls -al'
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/workspace/vb/bin
 export PATH=/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH
+
+[ -r "$HOME/.smartcd_config" ] && ( [ -n $BASH_VERSION ] || [ -n $ZSH_VERSION ] ) && source ~/.smartcd_config
