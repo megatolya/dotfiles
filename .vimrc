@@ -27,6 +27,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 colorscheme xoria256
 set ttyfast
+set lazyredraw
 
 set scrolloff=6
 set sidescrolloff=6
