@@ -125,6 +125,10 @@ vnoremap > >gv
 noremap j gj
 noremap k gk
 
+nmap <Leader>' ysiw'
+nmap <Leader>" ysiw"
+nmap <Leader>) ysiw)
+nmap <Leader>( ysiw)
 
 " Переключение по сплитам
 nmap <C-h> <C-W>h
