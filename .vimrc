@@ -109,15 +109,12 @@ command! Q q
 command! W w
 snoremap Y y$
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
-" <Space> = <PageDown> Как в браузерах
-nmap <Space> <PageDown>
 
+nmap <Space> <c-d>
+
+nmap * *N
 nmap n nzz
 nmap N Nzz
-nmap * *zz
-nmap # #zz
-nmap g* g*zz
-nmap g# g#zz
 
 vnoremap < <gv
 vnoremap > >gv
@@ -125,10 +122,10 @@ vnoremap > >gv
 noremap j gj
 noremap k gk
 
-nmap <Leader>' ysiw'
-nmap <Leader>" ysiw"
-nmap <Leader>) ysiw)
-nmap <Leader>( ysiw)
+nmap '' ysiw'
+nmap "" ysiw"
+nmap )) ysiw)
+nmap (( ysiw)
 
 " Переключение по сплитам
 nmap <C-h> <C-W>h
