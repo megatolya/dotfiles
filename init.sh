@@ -1,4 +1,6 @@
-ln -s /usr/bin/vim /usr/bin/e
+
+# ln -s /usr/bin/vim /usr/bin/e
+
 mkdir -p ~/.zsh/func
 ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" ~/.zsh/func/_brew
 brew install ack
@@ -13,5 +15,9 @@ ln -s ~/dotfiles/snippets ~/.vim/snippets
 rm ~/.zshrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+
 rm -rf ~/.vim/bundle/snipmate.vim/snippets/
 ln -s ~/dotfiles/colors ~/.vim/colors
+
+curl -L http://smartcd.org/install | bash
+source ~/.smartcd/lib/core/smartcd

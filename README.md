@@ -1,7 +1,7 @@
 #Мои настройки
 ```bash
-sudo sh init.sh
-#в vim
-:BundleInstall
-:!rm -rf ~/.vim/bundle/snipmate.vim/snippets/
+./init.sh
+
+vim -c ':BundleInstall'
+rm -rf ~/.vim/bundle/snipmate.vim/snippets/
 ```
