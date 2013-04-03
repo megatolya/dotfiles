@@ -113,8 +113,6 @@ nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 nmap <Space> <c-d>
 
 nmap * *N
-nmap n nzz
-nmap N Nzz
 
 vnoremap < <gv
 vnoremap > >gv
