@@ -19,7 +19,6 @@ export PATH=~/usr/local/:$PATH
 export PATH=/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH
 export PATH=/usr/local/share/npm/lib/node_modules/bin:$PATH
 
-[ -r "$HOME/.smartcd_config" ] && ( [ -n $BASH_VERSION ] || [ -n $ZSH_VERSION ] ) && source ~/.smartcd_config
 ###-begin-lmd-completion-###
 #
 # lmd command completion script
@@ -76,3 +75,4 @@ elif type compctl &>/dev/null; then
   }
   compctl -K _lmd_completion lmd
 fi
+###-end-lmd-completion-###
