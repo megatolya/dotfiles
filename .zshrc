@@ -75,3 +75,4 @@ elif type compctl &>/dev/null; then
   }
   compctl -K _lmd_completion lmd
 fi
+###-end-lmd-completion-###

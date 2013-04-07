@@ -3,21 +3,23 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'git://github.com/gmarik/vundle.git'
-Bundle 'git://github.com/ervandew/supertab.git'
-Bundle 'git://github.com/scrooloose/nerdtree.git'
-Bundle 'git://github.com/pangloss/vim-javascript.git'
-Bundle 'git://github.com/walm/jshint.vim.git'
-Bundle 'git://github.com/digitaltoad/vim-jade.git'
-Bundle 'git://github.com/msanders/snipmate.vim.git'
-Bundle 'git://github.com/mileszs/ack.vim.git'
-Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-Bundle 'git://github.com/kien/ctrlp.vim.git'
-Bundle 'git://github.com/tpope/vim-surround.git'
-Bundle 'git://github.com/tpope/vim-repeat.git'
-Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+Bundle 'gmarik/vundle'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-javascript'
+Bundle 'jQuery'
+Bundle 'walm/jshint.vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'msanders/snipmate.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'AutoClose'
-Bundle 'git://github.com/evindor/vim-rusmode.git'
+Bundle 'evindor/vim-rusmode'
+Bundle 'aperezdc/vim-template'
 filetype plugin indent on
 syntax enable
 "===================
@@ -50,7 +52,7 @@ set hlsearch
 set incsearch
 set undolevels=1000
 
-set wildmode=list:longest,full
+set wildmode=list:full
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
 
