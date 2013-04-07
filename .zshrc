@@ -8,6 +8,7 @@ export ZSH_THEME='my'
 source $ZSH/oh-my-zsh.sh
 
 alias ll='ls -al'
+alias ccat='~/pygments/pygmentize -g'
 
 export PATH=/usr/bin
 export PATH=/bin:$PATH

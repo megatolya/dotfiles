@@ -9,6 +9,8 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
+hg clone http://bitbucket.org/birkenfeld/pygments-main ~/pygments
+
 
 mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
