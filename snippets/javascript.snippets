@@ -1,14 +1,14 @@
 #logger
 snippet log
-	fastdial._logger.debug(${1:});
+	this._logger.debug(${1:});
 #logger json
 snippet logjs
-	fastdial._logger.debug(JSON.stringify(${1:}), null, '  ');
+	this._logger.debug(JSON.stringify(${1:}), null, '  ');
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
 	function(${3:first_argument}) {
-		${4:// body...}
+		${4:}
 	};
 # Function
 snippet fu
@@ -51,7 +51,7 @@ snippet timeout
 # Get Elements
 snippet cl
 	console.log(${1:});
-snippet req
+snippet re
 	require('${1:}');
 snippet $
 	$(${1:Id}).${2}

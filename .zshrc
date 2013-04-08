@@ -9,6 +9,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias ll='ls -al'
 alias ccat='~/pygments/pygmentize -g'
+alias s='node ~/dotfiles/static_server'
+alias ss='sudo node ~/dotfiles/static_server 80'
 
 export PATH=/usr/bin
 export PATH=/bin:$PATH
