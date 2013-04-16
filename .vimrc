@@ -20,6 +20,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'AutoClose'
 Bundle 'evindor/vim-rusmode'
 Bundle 'aperezdc/vim-template'
+
 filetype plugin indent on
 syntax enable
 "===================
