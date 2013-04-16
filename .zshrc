@@ -11,6 +11,7 @@ alias ll='ls -al'
 alias ccat='~/pygments/pygmentize -g'
 alias s='node ~/dotfiles/static_server'
 alias ss='sudo node ~/dotfiles/static_server 80'
+alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -p dev'
 
 export PATH=/usr/bin
 export PATH=/bin:$PATH
