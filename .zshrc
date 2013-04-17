@@ -12,6 +12,11 @@ alias ccat='~/pygments/pygmentize -g'
 alias s='node ~/dotfiles/static_server'
 alias ss='sudo node ~/dotfiles/static_server 80'
 alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -p dev'
+alias please='sudo'
+
+cdf() {  # short for cdfinder
+  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+}
 
 export PATH=/usr/bin
 export PATH=/bin:$PATH
