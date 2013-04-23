@@ -20,6 +20,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'AutoClose'
 Bundle 'evindor/vim-rusmode'
 Bundle 'aperezdc/vim-template'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'vimwiki'
 
 filetype plugin indent on
 syntax enable
