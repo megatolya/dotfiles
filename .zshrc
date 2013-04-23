@@ -7,6 +7,7 @@ export ZSH_THEME='my'
 
 source $ZSH/oh-my-zsh.sh
 
+alias battery='pmset -g batt'
 alias ll='ls -al'
 alias ccat='~/pygments/pygmentize -g'
 alias s='node ~/dotfiles/static_server'
@@ -20,6 +21,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=~/workspace/vb/bin:$PATH
 export PATH=~/usr/local/:$PATH
 export PATH=/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/share/npm/lib/node_modules/bin:$PATH
 
 ###-begin-lmd-completion-###
