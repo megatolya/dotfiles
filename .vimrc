@@ -16,12 +16,11 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'AutoClose'
 Bundle 'evindor/vim-rusmode'
 Bundle 'aperezdc/vim-template'
 Bundle 'editorconfig/editorconfig-vim'
-Bundle 'vimwiki'
+Bundle 'motemen/git-vim'
 
 filetype plugin indent on
 syntax enable
@@ -31,7 +30,7 @@ syntax enable
 let mapleader = ","
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
-colorscheme xoria256 
+colorscheme xoria256
 set ttyfast
 set lazyredraw
 
@@ -42,7 +41,7 @@ set nocursorcolumn
 set nocursorline
 
 set wrap
-set linebreak           " Перенос не разрывая слов"
+set linebreak
 set tabstop=4
 set backspace=indent,eol,start
 set autoindent
@@ -89,7 +88,11 @@ nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
 nmap <Leader>bd :bdelete<cr>
 nmap <Leader>tn :tabnew<cr>
-set pastetoggle=<leader>pp
+
+nmap vv viw
+
+set pastetoggle=ppp
+
 " Символ табуляции и конца строки
         if has('multi_byte')
             set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
@@ -100,22 +103,20 @@ set pastetoggle=<leader>pp
         endif
 
 
-nmap <Leader>n :set number! <cr>
+nmap <Leader>n :set number!<cr>
 nmap <Tab> gt
 nmap <S-Tab> gT
-nmap <Leader>m :CtrlPTag<CR>
 nmap <Leader><left> :leftabove vnew<CR>
 nmap <Leader><right> :rightbelow vnew<CR>
 nmap <Leader><up> :leftabove new<CR>
 nmap <Leader><down> :rightbelow new<CR>
-map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
 
 command! Q q
 command! W w
-snoremap Y y$
+
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
-nmap <Space> <c-d>
+nmap <Space> :NERDTreeToggle<cr>
 
 nmap * *N
 
@@ -129,6 +130,8 @@ nmap '' ysiw'
 nmap "" ysiw"
 nmap )) ysiw)
 nmap (( ysiw)
+
+nmap A A<Space>
 
 " Переключение по сплитам
 nmap <C-h> <C-W>h
