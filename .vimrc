@@ -26,7 +26,6 @@ filetype plugin indent on
 syntax enable
 "===================
 
-
 let mapleader = ","
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
@@ -34,8 +33,8 @@ colorscheme xoria256
 set ttyfast
 set lazyredraw
 
-set scrolloff=9
-set sidescrolloff=9
+set scrolloff=15
+set sidescrolloff=15
 
 set nocursorcolumn
 set nocursorline
@@ -91,7 +90,7 @@ nmap <Leader>tn :tabnew<cr>
 
 nmap vv viw
 
-set pastetoggle=ppp
+set pastetoggle=,pp
 
 " Символ табуляции и конца строки
         if has('multi_byte')
@@ -131,7 +130,6 @@ nmap "" ysiw"
 nmap )) ysiw)
 nmap (( ysiw)
 
-nmap A A<Space>
 
 " Переключение по сплитам
 nmap <C-h> <C-W>h
