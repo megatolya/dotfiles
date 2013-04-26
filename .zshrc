@@ -16,6 +16,7 @@ alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -p dev'
 alias please='sudo'
 alias bro='/Applications/Yandex.app/Contents/MacOS/Yandex'
 alias o='open'
+alias pie='node -p -i -e'
 
 cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
