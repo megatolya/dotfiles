@@ -81,25 +81,16 @@ set expandtab
 set t_Co=256
 
 nmap <Bs> :NERDTreeToggle<CR>
-map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
-nmap <Leader>re :edit!<cr>
+nmap <Leader>re :e!<cr>
 nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
-nmap <Leader>bd :bdelete<cr>
 nmap <Leader>tn :tabnew<cr>
+nmap <Leader>j i<cr><esc>k$
 
 nmap vv viw
 
 set pastetoggle=,pp
 
-" Символ табуляции и конца строки
-        if has('multi_byte')
-            set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
-        endif
-" Символ, который будет показан перед перенесенной строкой
-        if has("linebreak")
-              let &sbr = nr2char(8618).' '
-        endif
 
 
 nmap <Leader>n :set number!<cr>
@@ -138,20 +129,6 @@ nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
-" Warning: nightmare mode!
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-" hjkl в Insert mode зажав <Ctrl>
-imap <C-h> <C-o>h
-imap <C-j> <C-o>j
-imap <C-k> <C-o>k
-imap <C-l> <C-o>l
 
 " В коммандном режиме разрешить прыгать в конец и начало строки,
 " как в консоли
@@ -166,3 +143,12 @@ au BufNewFile,BufRead *.bemhtml setf javascript
 au BufNewFile,BufRead *.xjst setf javascript
 au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.jsm setf javascript
+
+" Символ табуляции и конца строки
+        if has('multi_byte')
+            set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
+        endif
+" Символ, который будет показан перед перенесенной строкой
+        if has("linebreak")
+              let &sbr = nr2char(8618).' '
+        endif
