@@ -1,9 +1,9 @@
-#logger
-snippet log
-	this._logger.debug(${1:});
-#logger json
-snippet logjs
-	this._logger.debug(JSON.stringify(${1:}), null, '  ');
+#dump
+snippet dd
+	dump(${1:});
+#dump json
+snippet dj
+	dump(JSON.stringify(${1:}));
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
@@ -17,7 +17,7 @@ snippet fu
 	}
 # Anonymous Function
 snippet f
-	function(${1}) {
+	function (${1}) {
 		${2}
 	}
 # if
@@ -47,7 +47,7 @@ snippet :f
 snippet timeout
 	setTimeout(function() {
 		${3}
-	}${2:0},);
+	}, ${2:0});
 # Get Elements
 snippet cl
 	console.log(${1:});

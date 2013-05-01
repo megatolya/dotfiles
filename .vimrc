@@ -16,30 +16,31 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'AutoClose'
 Bundle 'evindor/vim-rusmode'
 Bundle 'aperezdc/vim-template'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'motemen/git-vim'
+
 filetype plugin indent on
 syntax enable
 "===================
 
-
 let mapleader = ","
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
-colorscheme xoria256 
+colorscheme xoria256
 set ttyfast
 set lazyredraw
 
-set scrolloff=9
-set sidescrolloff=9
+set scrolloff=15
+set sidescrolloff=15
 
 set nocursorcolumn
 set nocursorline
 
 set wrap
-set linebreak           " Перенос не разрывая слов"
+set linebreak
 set tabstop=4
 set backspace=indent,eol,start
 set autoindent
@@ -80,39 +81,34 @@ set expandtab
 set t_Co=256
 
 nmap <Bs> :NERDTreeToggle<CR>
-map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
-nmap <Leader>re :edit!<cr>
+nmap <Leader>re :e!<cr>
 nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
-nmap <Leader>bd :bdelete<cr>
 nmap <Leader>tn :tabnew<cr>
-set pastetoggle=<leader>pp
-" Символ табуляции и конца строки
-        if has('multi_byte')
-            set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
-        endif
-" Символ, который будет показан перед перенесенной строкой
-        if has("linebreak")
-              let &sbr = nr2char(8618).' '
-        endif
+nmap <Leader>j i<cr><esc>k$
+
+nmap vv viw
+
+set pastetoggle=,pp
 
 
-nmap <Leader>n :set number! <cr>
+
+nmap <Leader>n :set number!<cr>
 nmap <Tab> gt
 nmap <S-Tab> gT
-nmap <Leader>m :CtrlPTag<CR>
 nmap <Leader><left> :leftabove vnew<CR>
 nmap <Leader><right> :rightbelow vnew<CR>
 nmap <Leader><up> :leftabove new<CR>
 nmap <Leader><down> :rightbelow new<CR>
-map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
+
+nmap <C-j> a<CR><ESC>k$
 
 command! Q q
 command! W w
-snoremap Y y$
+
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
-nmap <Space> <c-d>
+nmap <Space> :NERDTreeToggle<cr>
 
 nmap * *N
 
@@ -127,25 +123,12 @@ nmap "" ysiw"
 nmap )) ysiw)
 nmap (( ysiw)
 
+
 " Переключение по сплитам
 nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
-" Warning: nightmare mode!
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-" hjkl в Insert mode зажав <Ctrl>
-imap <C-h> <C-o>h
-imap <C-j> <C-o>j
-imap <C-k> <C-o>k
-imap <C-l> <C-o>l
 
 " В коммандном режиме разрешить прыгать в конец и начало строки,
 " как в консоли
@@ -160,3 +143,12 @@ au BufNewFile,BufRead *.bemhtml setf javascript
 au BufNewFile,BufRead *.xjst setf javascript
 au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.jsm setf javascript
+
+" Символ табуляции и конца строки
+        if has('multi_byte')
+            set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
+        endif
+" Символ, который будет показан перед перенесенной строкой
+        if has("linebreak")
+              let &sbr = nr2char(8618).' '
+        endif
