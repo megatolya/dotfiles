@@ -7,6 +7,16 @@ function battery_charge {
     echo `python battery.py` 2>/dev/null
 }
 
+function off-battery {
+    function battery_charge {}
+}
+
+function on-battery {
+    function battery_charge {
+        echo `python battery.py` 2>/dev/null
+    }
+}
+
 PROMPT='%{$fg[cyan]%}%~%{$reset_color%}%{$fg[blue]%} %{$reset_color%}$(git_prompt_info)%{$reset_color%} 
 ⌘  '
 RPROMPT='$(battery_charge)'
