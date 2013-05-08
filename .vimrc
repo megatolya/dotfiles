@@ -86,7 +86,6 @@ nmap <Leader><right> :rightbelow vnew<CR>
 nmap <Leader><up> :leftabove new<CR>
 nmap <Leader><down> :rightbelow new<CR>
 
-nmap <C-j> a<CR><ESC>k$
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
 nmap <Space> :NERDTreeToggle<cr>

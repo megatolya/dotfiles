@@ -1,9 +1,9 @@
 #dump
 snippet dd
-	dump(${1:});
+	dump(${1:} + '\n');
 #dump json
 snippet dj
-	dump(JSON.stringify(${1:}));
+	dump(JSON.stringify(${1:}, null, ' ') + '\n');
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
