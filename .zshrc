@@ -14,13 +14,11 @@ alias s='node ~/dotfiles/static_server'
 alias ss='sudo node ~/dotfiles/static_server 80'
 alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -p dev'
 alias please='sudo'
+alias grm='git rm $(git ls-files --deleted)'
 alias bro='/Applications/Yandex.app/Contents/MacOS/Yandex'
 alias o='open'
 alias pie='node -p -i -e'
-
-cdf() {  # short for cdfinder
-  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
-}
+alias gtree='git log --graph --oneline --decorate --all'
 
 export PATH=/usr/bin
 export PATH=/bin:$PATH
