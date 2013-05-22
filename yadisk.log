@@ -1,6 +1,0 @@
-{"level":"info","message":"Logged","timestamp":"2013-04-19T22:34:22.563Z"}
-{"level":"info","message":"Logged","timestamp":"2013-04-19T22:34:47.788Z"}
-{"level":"info","message":"\n/\n/git/\n/Загрузки/\n/мимими/\n/Музыка/\n/Добро Пожаловать.pdf\n/Обои для рабочего стола.jpg","timestamp":"2013-04-19T22:34:56.709Z"}
-{"level":"info","message":"\n/мимими/\n/мимими/IMG_1493.jpeg\n/мимими/IMG_1984.jpeg\n/мимими/IMG_2516.jpeg\n/мимими/IMG_5298.jpeg\n/мимими/IMG_5550-1.jpeg\n/мимими/IMG_9409.jpeg","timestamp":"2013-04-19T22:35:03.616Z"}
-{"level":"error","message":{"errno":34,"code":"ENOENT","path":"/Users/anatolijostrovskij/dotfiles/out/мимими","syscall":"open"},"timestamp":"2013-04-19T22:35:14.532Z"}
-{"level":"error","message":{"errno":34,"code":"ENOENT","path":"/Users/anatolijostrovskij/dotfiles/out/мимими","syscall":"open"},"timestamp":"2013-04-19T22:35:43.522Z"}
