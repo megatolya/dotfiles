@@ -121,3 +121,7 @@ defaults write com.apple.dashboard mcx-disabled -boolean YES
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+defaults write com.binaryage.TotalSpaces transitionSpeed 115
+
+killall Dock

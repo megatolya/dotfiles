@@ -20,6 +20,7 @@ alias o='open'
 alias pie='node -p -i -e'
 alias gtree='git log --graph --oneline --decorate --all'
 
+export PATH=/usr/local/opt/
 export PATH=/usr/bin
 export PATH=/bin:$PATH
 export PATH=/usr/sbin:$PATH
