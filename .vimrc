@@ -21,6 +21,8 @@ Bundle 'evindor/vim-rusmode'
 Bundle 'aperezdc/vim-template'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'motemen/git-vim'
+Bundle 'zeis/vim-kolor'
+Bundle 'molokai'
 
 filetype plugin indent on
 syntax enable
@@ -29,7 +31,7 @@ syntax enable
 let mapleader = ","
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
-colorscheme xoria256
+colorscheme kolor
 
 set ttyfast
 set lazyredraw
