@@ -20,14 +20,13 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/colors ~/.vim/colors
 
 vim +BundleInstall +qa
 
 rm -rf ~/.vim/bundle/snipmate.vim/snippets/
 rm -rf ~/.vim/bundle/vim-template/templates
 
-ln -s ~/dotfiles/snippets ~/.vim/bundle/snipmate.vim/snippets
-ln -s ~/dotfiles/templates ~/.vim/bundle/vim-template/templates
+ln -s ~/dotfiles/vim/snippets ~/.vim/bundle/snipmate.vim/snippets
+ln -s ~/dotfiles/vim/templates ~/.vim/bundle/vim-template/templates
 
 ./npm
