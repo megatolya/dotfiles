@@ -4,6 +4,8 @@
 #brew install colordiff
 #brew install ack
 
+./osx
+./brew
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ln -s ~/dotfiles/my.zsh-theme ~/.oh-my-zsh/themes/my.zsh-theme
 rm ~/.zshrc
@@ -27,3 +29,5 @@ rm -rf ~/.vim/bundle/vim-template/templates
 
 ln -s ~/dotfiles/snippets ~/.vim/bundle/snipmate.vim/snippets
 ln -s ~/dotfiles/templates ~/.vim/bundle/vim-template/templates
+
+./npm
