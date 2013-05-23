@@ -2,6 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
+plugins=(osx git bower brew battery github node npm)
 
 export ZSH_THEME='my'
 
@@ -21,7 +22,7 @@ alias pie='node -p -i -e'
 alias gtree='git log --graph --oneline --decorate --all'
 
 export PATH=/usr/local/opt/
-export PATH=/usr/bin
+export PATH=/usr/bin:$PATH
 export PATH=/bin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/sbin:$PATH
