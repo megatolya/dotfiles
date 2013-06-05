@@ -4,22 +4,20 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdtree'
-Bundle 'vim-javascript'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'walm/jshint.vim'
 Bundle 'digitaltoad/vim-jade'
-Bundle 'msanders/snipmate.vim'
 Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'zeis/vim-kolor'
-Bundle 'molokai'
 Bundle 'motemen/git-vim'
+Bundle 'ervandew/supertab'
+Bundle 'ap/vim-css-color'
+Bundle 'mattn/zencoding-vim'
 
 filetype plugin indent on
 syntax enable
-
 
 let mapleader = ","
 let NERDTreeShowHidden=1
@@ -72,6 +70,7 @@ set shiftround
 set ignorecase
 set smartcase
 set smarttab
+set smartindent
 set hlsearch
 set incsearch
 set undolevels=1000
