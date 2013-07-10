@@ -15,6 +15,11 @@ Bundle 'motemen/git-vim'
 Bundle 'ervandew/supertab'
 Bundle 'ap/vim-css-color'
 Bundle 'mattn/zencoding-vim'
+Bundle 'maksimr/vim-yate'
+Bundle 'juvenn/mustache.vim'
+Bundle 'michalliu/jsruntime.vim'
+Bundle 'michalliu/jsoncodecs.vim'
+Bundle 'michalliu/jsflakes.vim'
 
 filetype plugin indent on
 syntax enable
@@ -22,6 +27,8 @@ syntax enable
 let mapleader = ","
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
+
+let g:jsflakes_autolint = 0
 
 colorscheme kolor
 
@@ -53,6 +60,7 @@ nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
+
 
 set ttyfast
 set lazyredraw

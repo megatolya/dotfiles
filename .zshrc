@@ -1,5 +1,8 @@
 ZSH=$HOME/.oh-my-zsh
 
+set editing-mode vi
+set keymap vi-command
+
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 plugins=(osx git bower brew battery github node npm)
@@ -7,6 +10,11 @@ plugins=(osx git bower brew battery github node npm)
 export ZSH_THEME='my'
 
 source $ZSH/oh-my-zsh.sh
+
+function zz {
+    __cur_dir=`pwd`
+    zip -r `basename $0` ./
+}
 
 alias battery='pmset -g batt'
 alias ll='ls -al'

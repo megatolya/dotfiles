@@ -1,7 +1,7 @@
 var http = require("http"),
     url = require("url"),
     PATH = require("path"),
-    fs = require("fs")
+    fs = require("fs"),
     path = './',
     port = process.argv[3] || process.argv[2] || 8888;
 

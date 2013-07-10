@@ -1,6 +1,6 @@
 [user]
-    name = Anatoliy Ostrovskiy
-    email = megatolya@yandex-team.ru
+	name = Anatoliy Ostrovskiy
+	email = megatolya@yandex-team.ru
 [color]
     ui = true
 [color "branch"]
@@ -9,6 +9,7 @@
     remote = green
 [core]
     editor = e
+	excludesfile = /Users/megatolya/.gitignore_global
 [alias]
     co = checkout
     ci = commit
@@ -17,3 +18,9 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     type = cat-file -t
     dump = cat-file -p
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
