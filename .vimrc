@@ -100,3 +100,9 @@ set shm+=I
 set expandtab
 set t_Co=256
 set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
+set synmaxcol=200 
+set undodir=~/.vim/undos
+set undofile
+set showcmd
+set showmode
+set shortmess=aAItW

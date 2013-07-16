@@ -22,7 +22,7 @@ http.createServer(function(request, response) {
 
         if (fs.statSync(filepath).isDirectory()) {
             fs.readdir(filepath, function(err, files) {
-                var html = '<h1>' + PATH.resolve(path) + '</h1>';
+                var html = '<meta charset="utf8"><h1>' + PATH.resolve(path) + '</h1>';
 
                 html += '<a href="' + PATH.relative(path, filepath), '..' + '">..</a><br>';
 

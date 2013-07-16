@@ -1,0 +1,11 @@
+ln -sf ~/dotfiles/my.zsh-theme ~/.oh-my-zsh/themes/my.zsh-theme
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+vim +BundleInstall +qa
+
+rm -rf ~/.vim/bundle/snipmate.vim/snippets/
+rm -rf ~/.vim/bundle/vim-template/templates
+
+ln -sf ~/dotfiles/vim/snippets ~/.vim/bundle/snipmate.vim/snippets
+ln -sf ~/dotfiles/vim/templates ~/.vim/bundle/vim-template/templates
