@@ -1,4 +1,3 @@
-set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -13,6 +12,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'zeis/vim-kolor'
 Bundle 'motemen/git-vim'
 Bundle 'ervandew/supertab'
+Bundle 'pangloss/vim-javascript'
 Bundle 'ap/vim-css-color'
 Bundle 'mattn/zencoding-vim'
 Bundle 'maksimr/vim-yate'
@@ -20,6 +20,9 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'michalliu/jsruntime.vim'
 Bundle 'michalliu/jsoncodecs.vim'
 Bundle 'michalliu/jsflakes.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'guileen/vim-node'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on
 syntax enable
@@ -28,18 +31,40 @@ let mapleader = ","
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 
-let g:jsflakes_autolint = 0
+let loaded_matchparen=1
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_max_height = 10 " maxiumum height of match window
+let g:ctrlp_switch_buffer = 'et' " jump to a file if it's open already
+let g:ctrlp_use_caching = 1 " enable caching
+let g:ctrlp_clear_cache_on_exit=0       " speed up by not removing clearing cache evertime
+let g:ctrlp_mruf_max = 250              " number of recently opened files
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn|build)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+  \ }
+
+
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
 
 colorscheme kolor
 
 nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
 nmap <Leader>tn :tabnew<cr>
+map <Leader>b :call Browser ()<CR>
 nmap vv viw
 nmap <Tab> gt
 nmap <S-Tab> gT
 
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
+
+" Rotate Color Scheme \
+nnoremap <silent> \ :execute RotateColorTheme()<CR>
 
 nmap <Space> :NERDTreeToggle<cr>
 
@@ -47,6 +72,8 @@ nmap * *N
 
 vnoremap < <gv
 vnoremap > >gv
+
+inoremap jj <Esc>
 
 noremap j gj
 noremap k gk
@@ -61,7 +88,8 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
-
+set pastetoggle=,pa
+set nocompatible
 set ttyfast
 set lazyredraw
 set scrolloff=15
@@ -74,17 +102,20 @@ set tabstop=4
 set backspace=indent,eol,start
 set autoindent
 set shiftwidth=4
+set softtabstop=4
 set shiftround
 set ignorecase
 set smartcase
 set smarttab
+set expandtab
 set smartindent
 set hlsearch
+set nohidden
 set incsearch
 set undolevels=1000
-set wildmode=list:full
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
+set wildmode=full
 set hidden
 set visualbell
 set noerrorbells
@@ -96,8 +127,8 @@ set list
 set numberwidth=4
 set number
 set laststatus=2
+set statusline=%F%m%r%h%w\ -\ %Y\ [%l,%v][%p%%]
 set shm+=I
-set expandtab
 set t_Co=256
 set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
 set synmaxcol=200 
@@ -105,4 +136,38 @@ set undodir=~/.vim/undos
 set undofile
 set showcmd
 set showmode
-set shortmess=aAItW
+set shortmess=AItWsoO
+
+function! Browser ()
+   let line = getline (".")
+   let line = matchstr (line, "http[^   ]*")
+   exec "!open ".line
+endfunction
+
+"{{{Theme Rotating
+let themeindex=1
+function! RotateColorTheme()
+   let y = -1
+   while y == -1
+      let colorstring = "#kolor#blue#elflord#evening#koehler#murphy#pablo#desert#torte#"
+      let x = match( colorstring, "#", g:themeindex )
+      let y = match( colorstring, "#", x + 1 )
+      let g:themeindex = x + 1
+      if y == -1
+         let g:themeindex = 0
+      else
+         let themestring = strpart(colorstring, x + 1, y - x - 1)
+         return ":colorscheme ".themestring
+      endif
+   endwhile
+endfunction
+" }}}
+
+function! LintAgain()
+    if &filetype == "javascript"
+        :JSHintUpdate
+    endif
+endfunction
+
+autocmd BufEnter * silent! lcd %:p:h
+autocmd CursorHold * :call LintAgain ()
