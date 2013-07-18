@@ -10,6 +10,8 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'mileszs/ack.vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'zeis/vim-kolor'
+Bundle 'ricardovaleriano/vim-github-theme'
+Bundle 'xoria256.vim'
 Bundle 'motemen/git-vim'
 Bundle 'ervandew/supertab'
 Bundle 'pangloss/vim-javascript'
@@ -17,33 +19,32 @@ Bundle 'ap/vim-css-color'
 Bundle 'mattn/zencoding-vim'
 Bundle 'maksimr/vim-yate'
 Bundle 'juvenn/mustache.vim'
-Bundle 'michalliu/jsruntime.vim'
-Bundle 'michalliu/jsoncodecs.vim'
-Bundle 'michalliu/jsflakes.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'guileen/vim-node'
 Bundle 'kien/ctrlp.vim'
+Bundle 'plasticboy/vim-markdown'
 
 filetype plugin indent on
 syntax enable
 
+colorscheme kolor
+
 let mapleader = ","
+
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 
-let loaded_matchparen=1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_max_height = 10 " maxiumum height of match window
-let g:ctrlp_switch_buffer = 'et' " jump to a file if it's open already
-let g:ctrlp_use_caching = 1 " enable caching
-let g:ctrlp_clear_cache_on_exit=0       " speed up by not removing clearing cache evertime
-let g:ctrlp_mruf_max = 250              " number of recently opened files
+let g:ctrlp_max_height = 15
+let g:ctrlp_switch_buffer = 'et'
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit=0
+let g:ctrlp_mruf_max = 250
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|build)$',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
   \ }
 
 
@@ -51,20 +52,15 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-colorscheme kolor
-
 nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
 nmap <Leader>tn :tabnew<cr>
-map <Leader>b :call Browser ()<CR>
 nmap vv viw
+
 nmap <Tab> gt
 nmap <S-Tab> gT
 
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
-
-" Rotate Color Scheme \
-nnoremap <silent> \ :execute RotateColorTheme()<CR>
 
 nmap <Space> :NERDTreeToggle<cr>
 
@@ -131,43 +127,14 @@ set statusline=%F%m%r%h%w\ -\ %Y\ [%l,%v][%p%%]
 set shm+=I
 set t_Co=256
 set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
-set synmaxcol=200 
+set synmaxcol=200
 set undodir=~/.vim/undos
 set undofile
 set showcmd
 set showmode
 set shortmess=AItWsoO
 
-function! Browser ()
-   let line = getline (".")
-   let line = matchstr (line, "http[^   ]*")
-   exec "!open ".line
-endfunction
-
-"{{{Theme Rotating
-let themeindex=1
-function! RotateColorTheme()
-   let y = -1
-   while y == -1
-      let colorstring = "#kolor#blue#elflord#evening#koehler#murphy#pablo#desert#torte#"
-      let x = match( colorstring, "#", g:themeindex )
-      let y = match( colorstring, "#", x + 1 )
-      let g:themeindex = x + 1
-      if y == -1
-         let g:themeindex = 0
-      else
-         let themestring = strpart(colorstring, x + 1, y - x - 1)
-         return ":colorscheme ".themestring
-      endif
-   endwhile
-endfunction
-" }}}
-
-function! LintAgain()
-    if &filetype == "javascript"
-        :JSHintUpdate
-    endif
-endfunction
-
-autocmd BufEnter * silent! lcd %:p:h
-autocmd CursorHold * :call LintAgain ()
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
