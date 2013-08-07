@@ -1740,7 +1740,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>127 162 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 0 1431 878 0 0 1440 878 </string>
+	<string>4 422 570 451 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2536,7 +2536,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-07-09T21:07:44Z</date>
+	<date>2013-08-04T09:59:44Z</date>
 	<key>SUSkippedVersion</key>
 	<string>1.0.0.20130622</string>
 	<key>SavePasteHistory</key>
