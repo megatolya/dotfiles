@@ -28,6 +28,8 @@ alias bro='/Applications/Yandex.app/Contents/MacOS/Yandex'
 alias o='open'
 alias pie='node -p -i -e'
 alias gtree='git log --graph --oneline --decorate --all'
+alias ps='python -m SimpleHTTPServer'
+alias pss='please python -m SimpleHTTPServer 80'
 
 export PATH=/usr/local/opt/
 export PATH=/usr/bin:$PATH
