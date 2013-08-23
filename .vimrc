@@ -20,6 +20,7 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'guileen/vim-node'
 Bundle 'kien/ctrlp.vim'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'groenewege/vim-less'
 
 filetype plugin indent on
 syntax enable
