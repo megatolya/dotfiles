@@ -5,4 +5,3 @@
 --ignore-dir=vendor
 --ignore-dir=public/generated
 --sort-files
--a
