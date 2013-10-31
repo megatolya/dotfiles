@@ -142,6 +142,7 @@ set undofile
 set showcmd
 set showmode
 set shortmess=AItWsoO
+set colorcolumn=82
 
 :command WQ wq
 :command Wq wq
