@@ -4,4 +4,6 @@
 --ignore-dir=tmp
 --ignore-dir=vendor
 --ignore-dir=public/generated
+--ignore-dir=lego
+--ignore-dir=components
 --sort-files
