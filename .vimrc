@@ -75,6 +75,8 @@ nmap <Space> :NERDTreeToggle<cr>
 
 nmap * *N
 
+nnoremap <cr> i<cr><Esc>k$
+
 vnoremap < <gv
 vnoremap > >gv
 
