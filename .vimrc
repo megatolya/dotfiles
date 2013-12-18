@@ -12,6 +12,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'motemen/git-vim'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
 
 " themes
 Bundle 'ricardovaleriano/vim-github-theme'
@@ -42,7 +43,8 @@ let mapleader = ","
 
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
-
+let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
+let NERDTreeKeepTreeInNewTab=1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -69,13 +71,16 @@ nmap vv viw
 nmap <Tab> gt
 nmap <S-Tab> gT
 
+nmap '' ysiw'
+nmap "" ysiw"
+
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
 nmap <Space> :NERDTreeToggle<cr>
 
 nmap * *N
 
-nnoremap <cr> i<cr><Esc>k$
+nnoremap <cr> a<cr><Esc>k$hl
 
 vnoremap < <gv
 vnoremap > >gv
