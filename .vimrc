@@ -2,25 +2,40 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" basic
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'walm/jshint.vim'
-Bundle 'digitaltoad/vim-jade'
 Bundle 'mileszs/ack.vim'
 Bundle 'editorconfig/editorconfig-vim'
-Bundle 'zeis/vim-kolor'
-Bundle 'ricardovaleriano/vim-github-theme'
-Bundle 'xoria256.vim'
 Bundle 'motemen/git-vim'
 Bundle 'ervandew/supertab'
-Bundle 'ap/vim-css-color'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
+
+" themes
+Bundle 'ricardovaleriano/vim-github-theme'
+Bundle 'zeis/vim-kolor'
+Bundle 'xoria256.vim'
+
+" syntax
+Bundle 'wavded/vim-stylus'
 Bundle 'maksimr/vim-yate'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'digitaltoad/vim-jade'
 Bundle 'juvenn/mustache.vim'
 Bundle 'guileen/vim-node'
 Bundle 'kien/ctrlp.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'groenewege/vim-less'
+Bundle 'ap/vim-css-color'
+
+" snippets
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 
 filetype plugin indent on
 syntax enable
@@ -31,7 +46,8 @@ let mapleader = ","
 
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
-
+let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
+let NERDTreeKeepTreeInNewTab=1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -42,7 +58,7 @@ let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_mruf_max = 250
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'file': '\v\.(exe|so|dll|DS_Store)$',
   \ }
 
 
@@ -58,11 +74,16 @@ nmap vv viw
 nmap <Tab> gt
 nmap <S-Tab> gT
 
+nmap '' ysiw'
+nmap "" ysiw"
+
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
 nmap <Space> :NERDTreeToggle<cr>
 
 nmap * *N
+
+nnoremap <cr> a<cr><Esc>k$hl
 
 vnoremap < <gv
 vnoremap > >gv

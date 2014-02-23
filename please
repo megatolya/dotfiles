@@ -1,2 +1,3 @@
 please ln -s /usr/bin/vim /usr/bin/e
+please ln -s /usr/bin/vim /usr/bin/e
 please ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
