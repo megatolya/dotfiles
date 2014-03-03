@@ -23,6 +23,7 @@ alias s='node ~/dotfiles/static_server'
 alias ss='sudo node ~/dotfiles/static_server 80'
 alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -p dev'
 alias please='sudo'
+alias pleease='sudo \!-1'
 alias grm='git rm $(git ls-files --deleted)'
 alias bro='/Applications/Yandex.app/Contents/MacOS/Yandex'
 alias o='open'
@@ -30,6 +31,7 @@ alias pie='node -p -i -e'
 alias gtree='git log --graph --oneline --decorate --all'
 alias ps='python -m SimpleHTTPServer'
 alias pss='please python -m SimpleHTTPServer 80'
+alias preview='groff -Tps > /tmp/tmp.ps && open -a Preview /tmp/tmp.ps'
 
 export PATH=/usr/local/opt/
 export PATH=/usr/bin:$PATH

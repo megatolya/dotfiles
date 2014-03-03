@@ -13,6 +13,7 @@ Bundle 'motemen/git-vim'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'airblade/vim-gitgutter'
 
 " themes
 Bundle 'ricardovaleriano/vim-github-theme'
