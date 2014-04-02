@@ -23,20 +23,12 @@ Bundle 'xoria256.vim'
 " syntax
 Bundle 'wavded/vim-stylus'
 Bundle 'maksimr/vim-yate'
-Bundle 'plasticboy/vim-markdown'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'juvenn/mustache.vim'
 Bundle 'guileen/vim-node'
 Bundle 'kien/ctrlp.vim'
-Bundle 'plasticboy/vim-markdown'
 Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
-
-" snippets
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
 
 filetype plugin indent on
 syntax enable
