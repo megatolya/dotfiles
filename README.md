@@ -1,14 +1,16 @@
 Скачать:
 
-[http://spectacleapp.com/](Spectacle)
+[Spectacle](http://spectacleapp.com/)
 
-[http://totalspaces.binaryage.com](TotalSpaces)
+[TotalSpaces](http://totalspaces.binaryage.com)
 
-[http://mxcl.github.io/homebrew/](Homebrew)
+[Homebrew](http://mxcl.github.io/homebrew/)
 
-[http://www.sourcetreeapp.com/](SourceTree)
+[SourceTree](http://www.sourcetreeapp.com/)
 
-[http://www.iterm2.com/](iTerm 2)
+[iTerm 2](http://www.iterm2.com/)
+
+[Шрифт для консоли](https://github.com/Lokaltog/powerline-fonts)
 
 Запустить
 ```bash

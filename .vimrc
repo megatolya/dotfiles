@@ -27,7 +27,6 @@ Bundle 'maksimr/vim-yate'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'juvenn/mustache.vim'
 Bundle 'guileen/vim-node'
-Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
 
