@@ -33,7 +33,7 @@ Bundle 'ap/vim-css-color'
 filetype plugin indent on
 syntax enable
 
-colorscheme kolor
+colorscheme github
 
 let mapleader = ","
 

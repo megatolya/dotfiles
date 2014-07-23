@@ -1,7 +1,4 @@
 #! /bin/bash
-#sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/subl
-#brew install colordiff
-#brew install ack
 
 ./links
 ./osx
