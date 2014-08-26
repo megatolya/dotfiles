@@ -15,11 +15,17 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'vim-scripts/IndexedSearch'
+Bundle 'gregsexton/MatchTag'
+Bundle 'idbrii/vim-hiinterestingword'
 
 " themes
 Bundle 'ricardovaleriano/vim-github-theme'
 Bundle 'zeis/vim-kolor'
 Bundle 'xoria256.vim'
+
+" powerline
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " syntax
 Bundle 'wavded/vim-stylus'
@@ -28,7 +34,8 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'juvenn/mustache.vim'
 Bundle 'guileen/vim-node'
 Bundle 'groenewege/vim-less'
-Bundle 'ap/vim-css-color'
+Bundle 'gorodinskiy/vim-coloresque'
+Bundle 'leafgarland/typescript-vim'
 
 filetype plugin indent on
 syntax enable
@@ -41,6 +48,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
 let NERDTreeKeepTreeInNewTab=1
+let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -59,6 +67,10 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
+nnoremap J mzJ`z
+nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
+nnoremap Y y$
+
 nmap <leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
 nmap <Leader>tn :tabnew<cr>
@@ -72,11 +84,10 @@ nmap "" ysiw"
 
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
+nmap <S-Space> :NERDTreeFind<cr>
 nmap <Space> :NERDTreeToggle<cr>
 
 nmap * *N
-
-nnoremap <cr> a<cr><Esc>k$hl
 
 vnoremap < <gv
 vnoremap > >gv
@@ -96,7 +107,16 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
+ " Search matches are always in center
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap # #zz
+nmap g* g*zz
+nmap g# g#zz
+
 set pastetoggle=,pa
+set guicursor=n:blinkon0
 set nocompatible
 set ttyfast
 set lazyredraw
@@ -147,7 +167,38 @@ set showmode
 set shortmess=AItWsoO
 set colorcolumn=82
 
-:command WQ wq
-:command Wq wq
-:command W w
-:command Q q
+command! -bang E e<bang>
+command! -bang Q q<bang>
+command! -bang W w<bang>
+command! -bang QA qa<bang>
+command! -bang Qa qa<bang>
+command! -bang Wa wa<bang>
+command! -bang WA wa<bang>
+command! -bang Wq wq<bang>
+command! -bang WQ wq<bang>
+
+"command! -nargs=* Only call CloseHiddenBuffers()
+function! CloseHiddenBuffers()
+  " figure out which buffers are visible in any tab
+  let visible = {}
+  for t in range(1, tabpagenr('$'))
+    for b in tabpagebuflist(t)
+      let visible[b] = 1
+    endfor
+  endfor
+  " close any buffer that are loaded and not visible
+  let l:tally = 0
+  for b in range(1, bufnr('$'))
+    if bufloaded(b) && !has_key(visible, b)
+      let l:tally += 1
+      exe 'bw ' . b
+    endif
+  endfor
+  echon "Deleted " . l:tally . " buffers"
+endfun
+
+autocmd FocusLost * :wa
+au BufNewFile,BufRead *.js setf javascript
+au BufNewFile,BufRead *.jsm setf javascript
+au BufNewFile,BufRead *.json setf javascript
+au BufNewFile,BufRead Jakefile setf javascript
