@@ -48,7 +48,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
 let NERDTreeKeepTreeInNewTab=1
-let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
+let NERDTreeBookmarksFile= $HOME . '/dotfiles/.NERDTreeBookmarks'
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -71,9 +71,11 @@ nnoremap J mzJ`z
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
 
-nmap <leader>ts :%s/\s\+$//e<CR>
+nmap <Leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
 nmap <Leader>tn :tabnew<cr>
+nmap <Leader>o :NERDTree<cr>:OpenBookmark<Space>
+
 nmap vv viw
 
 nmap <Tab> gt
@@ -176,26 +178,6 @@ command! -bang Wa wa<bang>
 command! -bang WA wa<bang>
 command! -bang Wq wq<bang>
 command! -bang WQ wq<bang>
-
-"command! -nargs=* Only call CloseHiddenBuffers()
-function! CloseHiddenBuffers()
-  " figure out which buffers are visible in any tab
-  let visible = {}
-  for t in range(1, tabpagenr('$'))
-    for b in tabpagebuflist(t)
-      let visible[b] = 1
-    endfor
-  endfor
-  " close any buffer that are loaded and not visible
-  let l:tally = 0
-  for b in range(1, bufnr('$'))
-    if bufloaded(b) && !has_key(visible, b)
-      let l:tally += 1
-      exe 'bw ' . b
-    endif
-  endfor
-  echon "Deleted " . l:tally . " buffers"
-endfun
 
 autocmd FocusLost * :wa
 au BufNewFile,BufRead *.js setf javascript
