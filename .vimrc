@@ -2,7 +2,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" basic
+" appearance
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
@@ -12,12 +12,9 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'motemen/git-vim'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-surround'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'gregsexton/MatchTag'
-Bundle 'idbrii/vim-hiinterestingword'
+Bundle 'gorodinskiy/vim-coloresque'
 
 " themes
 Bundle 'ricardovaleriano/vim-github-theme'
@@ -34,7 +31,6 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'juvenn/mustache.vim'
 Bundle 'guileen/vim-node'
 Bundle 'groenewege/vim-less'
-Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'leafgarland/typescript-vim'
 
 filetype plugin indent on
@@ -62,12 +58,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|DS_Store)$',
   \ }
 
-
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
-
-nnoremap J mzJ`z
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
 
@@ -75,14 +65,12 @@ nmap <Leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>bl :ls<cr>:b
 nmap <Leader>tn :tabnew<cr>
 nmap <Leader>o :NERDTree<cr>:OpenBookmark<Space>
+nmap <Leader>v :tabnew<cr>:e ~/.vimrc<cr>
 
 nmap vv viw
 
 nmap <Tab> gt
 nmap <S-Tab> gT
-
-nmap '' ysiw'
-nmap "" ysiw"
 
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
@@ -93,8 +81,6 @@ nmap * *N
 
 vnoremap < <gv
 vnoremap > >gv
-
-inoremap jj <Esc>
 
 noremap j gj
 noremap k gk
@@ -108,14 +94,6 @@ nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
-
- " Search matches are always in center
-nmap n nzz
-nmap N Nzz
-nmap * *zz
-nmap # #zz
-nmap g* g*zz
-nmap g# g#zz
 
 set pastetoggle=,pa
 set guicursor=n:blinkon0
@@ -157,7 +135,6 @@ set list
 set numberwidth=4
 set number
 set laststatus=2
-set statusline=%F%m%r%h%w\ -\ %Y\ [%l,%v][%p%%]
 set shm+=I
 set t_Co=256
 set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
@@ -179,7 +156,6 @@ command! -bang WA wa<bang>
 command! -bang Wq wq<bang>
 command! -bang WQ wq<bang>
 
-autocmd FocusLost * :wa
 au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.jsm setf javascript
 au BufNewFile,BufRead *.json setf javascript

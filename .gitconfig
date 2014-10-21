@@ -1,6 +1,6 @@
 [user]
 	name = Anatoliy Ostrovskiy
-	email = forgetthisbox@gmail.com
+	email = megatolya@yandex-team.ru
 [color]
     ui = true
 [color "branch"]
@@ -8,8 +8,9 @@
     local = yellow
     remote = green
 [core]
-    editor = e
+    editor = vim
 	excludesfile = /Users/megatolya/.gitignore_global
+	compression = 0
 [alias]
     co = checkout
     ci = commit
@@ -18,9 +19,11 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     type = cat-file -t
     dump = cat-file -p
+    change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ $`echo $VAR` = \\\"$OLD\\\" ]]; then export $VAR=\\\"$NEW\\\"; fi\" $@; }; f"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
