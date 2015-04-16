@@ -5,7 +5,7 @@ set keymap vi-command
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
-plugins=(osx git bower brew battery github node npm)
+plugins=(osx git bower brew battery github node npm nyan)
 
 export ZSH_THEME='my'
 
@@ -37,11 +37,13 @@ export PATH=/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=~/workspace/vb/bin:$PATH
-export PATH=~/usr/local/:$PATH
+export PATH=~/usr/local:$PATH
 export PATH=/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/share/npm/lib/node_modules/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/Users/megatolya/Library/Android/sdk/platform-tools:$PATH
+export PATH=/Users/megatolya/Library/Android/sdk/tools:$PATH
 
 ###-begin-lmd-completion-###
 #
