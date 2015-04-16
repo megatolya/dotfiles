@@ -28,6 +28,7 @@ alias gtree='git log --graph --oneline --decorate --all'
 alias ps='python -m SimpleHTTPServer'
 alias pss='please python -m SimpleHTTPServer 80'
 alias preview='groff -Tps > /tmp/tmp.ps && open -a Preview /tmp/tmp.ps'
+alias kino='ssh dev1.kinopoisk.ru -t "cd www/kinopoisk; zsh --login"'
 
 export PATH=/usr/local/opt
 export PATH=/usr/bin:$PATH

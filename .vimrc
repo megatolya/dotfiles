@@ -15,14 +15,18 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'gorodinskiy/vim-coloresque'
+Bundle 'aperezdc/vim-template'
+" powerline
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " themes
 Bundle 'ricardovaleriano/vim-github-theme'
 Bundle 'zeis/vim-kolor'
 Bundle 'xoria256.vim'
 
-" powerline
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " syntax
 Bundle 'wavded/vim-stylus'
@@ -57,6 +61,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll|DS_Store)$',
   \ }
+
 
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
@@ -160,3 +165,8 @@ au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.jsm setf javascript
 au BufNewFile,BufRead *.json setf javascript
 au BufNewFile,BufRead Jakefile setf javascript
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
