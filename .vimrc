@@ -48,7 +48,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
 let NERDTreeKeepTreeInNewTab=1
-let NERDTreeBookmarksFile= $HOME . '/dotfiles/.NERDTreeBookmarks'
+"let NERDTreeBookmarksFile= $HOME . '/dotfiles/.NERDTreeBookmarks'
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
