@@ -5,6 +5,7 @@ call vundle#rc()
 " appearance
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'walm/jshint.vim'
 Bundle 'mileszs/ack.vim'
@@ -72,7 +73,7 @@ nmap <Leader>tn :tabnew<cr>
 nmap <Leader>o :NERDTree<cr>:OpenBookmark<Space>
 nmap <Leader>v :tabnew<cr>:e ~/.vimrc<cr>
 
-nmap vv viw
+nmap qq :q<cr>
 
 nmap <Tab> gt
 nmap <S-Tab> gT
@@ -80,7 +81,7 @@ nmap <S-Tab> gT
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
 nmap <S-Space> :NERDTreeFind<cr>
-nmap <Space> :NERDTreeToggle<cr>
+nmap <Space> <plug>NERDTreeTabsToggle<CR>
 
 nmap * *N
 
