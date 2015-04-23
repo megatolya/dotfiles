@@ -22,7 +22,7 @@ alias pleease='sudo \!-1'
 alias grm='git rm $(git ls-files --deleted)'
 alias bro='/Applications/Yandex.app/Contents/MacOS/Yandex'
 alias o='open'
-alias e='mvim'
+alias e='vim'
 alias pie='node -p -i -e'
 alias gtree='git log --graph --oneline --decorate --all'
 alias ps='python -m SimpleHTTPServer'
@@ -103,3 +103,9 @@ elif type compctl &>/dev/null; then
   compctl -K _lmd_completion lmd
 fi
 ###-end-lmd-completion-###
+
+export LC_CTYPE="ru_RU.utf8"
+export DEBFULLNAME="Anatoly Ostrovsky"
+export EMAIL=megatolya@yandex-team.ru
+alias dch='dch --distributor debian'
+alias debuild='debuild --no-lintian'
