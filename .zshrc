@@ -5,7 +5,7 @@ set keymap vi-command
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
-plugins=(git bower brew battery github node npm nyan docker gem gitfast gradle jsontools pip tmux vi-mode web-search)
+plugins=(git bower brew battery github node npm nyan docker gem gitfast gradle jsontools pip tmux web-search)
 
 export ZSH_THEME='my'
 
