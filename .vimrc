@@ -5,13 +5,12 @@ call vundle#rc()
 " appearance
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'ervandew/supertab'
 Bundle 'walm/jshint.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'motemen/git-vim'
-Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
@@ -51,6 +50,7 @@ let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
 let NERDTreeKeepTreeInNewTab=1
 "let NERDTreeBookmarksFile= $HOME . '/dotfiles/.NERDTreeBookmarks'
 
+
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_max_height = 15
@@ -81,7 +81,7 @@ nmap <S-Tab> gT
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
 nmap <S-Space> :NERDTreeFind<cr>
-nmap <Space> <plug>NERDTreeTabsToggle<CR>
+nmap <Space> :NERDTreeToggle<CR>
 
 nmap * *N
 
@@ -171,3 +171,6 @@ au BufNewFile,BufRead Jakefile setf javascript
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:SuperTabLongestEnhanced=0
+let g:SuperTabLongestHighlight=0
