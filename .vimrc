@@ -15,7 +15,12 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'aperezdc/vim-template'
-Bundle 'Valloric/YouCompleteMe'
+
+if has("gui_macvim")
+    Bundle 'Valloric/YouCompleteMe'
+else
+    Bundle 'ervandew/supertab'
+endif
 
 " powerline
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
