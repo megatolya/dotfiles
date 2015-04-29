@@ -41,7 +41,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 
 export NVM_DIR=~/.nvm
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    alias e='vim'
+    alias e='/usr/bin/vim'
     export LC_CTYPE="ru_RU.utf8"
     export DEBFULLNAME="Anatoly Ostrovsky"
     export EMAIL=megatolya@yandex-team.ru
