@@ -6,7 +6,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'ervandew/supertab'
 Bundle 'walm/jshint.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'editorconfig/editorconfig-vim'
@@ -16,11 +15,13 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'aperezdc/vim-template'
+Bundle 'Valloric/YouCompleteMe'
+
 " powerline
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " snippets
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 
 " themes
 Bundle 'ricardovaleriano/vim-github-theme'
