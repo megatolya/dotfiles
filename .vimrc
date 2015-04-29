@@ -102,6 +102,7 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
+set mouse=a
 set pastetoggle=,pa
 set guicursor=n:blinkon0
 set nocompatible
