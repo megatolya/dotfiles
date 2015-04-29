@@ -5,5 +5,3 @@ set go-=l
 set go-=L
 set go-=r
 set go-=R
-
-set mouse=
