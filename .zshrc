@@ -7,6 +7,7 @@ fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 plugins=(git bower brew battery node npm nyan docker gem gitfast gradle jsontools pip tmux web-search)
 
+export TERM="xterm-256color"
 export ZSH_THEME='my'
 
 source $ZSH/oh-my-zsh.sh
