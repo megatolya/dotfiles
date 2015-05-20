@@ -1,45 +1,48 @@
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " appearance
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'walm/jshint.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'motemen/git-vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'gorodinskiy/vim-coloresque'
-Bundle 'aperezdc/vim-template'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'walm/jshint.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'motemen/git-vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'aperezdc/vim-template'
+Plugin 'Valloric/YouCompleteMe'
 
 " powerline
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " snippets
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " themes
-Bundle 'ricardovaleriano/vim-github-theme'
-Bundle 'zeis/vim-kolor'
-Bundle 'xoria256.vim'
-
+Plugin 'ricardovaleriano/vim-github-theme'
+Plugin 'zeis/vim-kolor'
+Plugin 'xoria256.vim'
+Plugin 'endel/vim-github-colorscheme'
 
 " syntax
-Bundle 'wavded/vim-stylus'
-Bundle 'maksimr/vim-yate'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'juvenn/mustache.vim'
-Bundle 'guileen/vim-node'
-Bundle 'groenewege/vim-less'
-Bundle 'leafgarland/typescript-vim'
+Plugin 'wavded/vim-stylus'
+Plugin 'maksimr/vim-yate'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'juvenn/mustache.vim'
+Plugin 'guileen/vim-node'
+Plugin 'groenewege/vim-less'
+Plugin 'leafgarland/typescript-vim'
 
-filetype plugin indent on
-syntax enable
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 colorscheme github
 
