@@ -12,9 +12,11 @@
 
 [Шрифт для консоли](https://github.com/Lokaltog/powerline-fonts)
 
+[Powerline для консоли](https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git)
+
 Запустить
 ```bash
-git clone git@github.com:megatolya/dotfiles.git ~/dotfiles && cd ~ && cd dotfiles && ./init.sh
+git clone git@github.com:megatolya/dotfiles.git ~/dotfiles && cd ~ && cd dotfiles && ./links.sh
 ```
 
 
