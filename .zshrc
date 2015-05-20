@@ -5,7 +5,7 @@ set keymap vi-command
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
-plugins=(git bower brew battery github node npm nyan docker gem gitfast gradle jsontools pip tmux web-search)
+plugins=(git bower brew battery node npm nyan docker gem gitfast gradle jsontools pip tmux web-search)
 
 export ZSH_THEME='my'
 
@@ -41,6 +41,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 
 export NVM_DIR=~/.nvm
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    export PATH=~/www/kinopoisk/./node_modules/.bin:$PATH
     alias e='vim'
     export LC_CTYPE="ru_RU.utf8"
     export DEBFULLNAME="Anatoly Ostrovsky"
