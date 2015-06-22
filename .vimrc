@@ -18,13 +18,10 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'aperezdc/vim-template'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
 
 " powerline
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-" snippets
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 
 " themes
 Plugin 'ricardovaleriano/vim-github-theme'
@@ -40,6 +37,7 @@ Plugin 'juvenn/mustache.vim'
 Plugin 'guileen/vim-node'
 Plugin 'groenewege/vim-less'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -172,32 +170,6 @@ au BufNewFile,BufRead *.jsm setf javascript
 au BufNewFile,BufRead *.json setf javascript
 au BufNewFile,BufRead Jakefile setf javascript
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-let g:SuperTabLongestEnhanced=0
-let g:SuperTabLongestHighlight=0
-
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-e>"
 " this mapping Enter key to <C-y> to chose the current highlight item 
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
