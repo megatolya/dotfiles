@@ -41,6 +41,11 @@ export PATH=/usr/local/share/npm/lib/node_modules/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 
 export NVM_DIR=~/.nvm
+
+export GREP_OPTIONS="-R --exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components"
+
+zstyle ':urlglobber' url-other-schema
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export PATH=~/www/kinopoisk/./node_modules/.bin:$PATH
     alias e='vim'
@@ -56,3 +61,4 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias kino='ssh dev1.kinopoisk.ru -t "cd www/kinopoisk; zsh --login"'
     alias e='mvim'
 fi
+
