@@ -80,6 +80,9 @@ nmap qq :q<cr>
 nmap <Tab> gt
 nmap <S-Tab> gT
 
+nmap <S-l> <Plug>GitGutterNextHunk
+nmap <S-h> <Plug>GitGutterPrevHunk
+
 nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
 
 nmap <S-Space> :NERDTreeFind<cr>
