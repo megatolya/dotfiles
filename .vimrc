@@ -42,6 +42,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+syntax on
+
 colorscheme github
 
 let mapleader = ","
@@ -50,8 +52,6 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
 let NERDTreeKeepTreeInNewTab=1
-"let NERDTreeBookmarksFile= $HOME . '/dotfiles/.NERDTreeBookmarks'
-
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -65,7 +65,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|DS_Store)$',
   \ }
 
-
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
 
@@ -74,6 +73,7 @@ nmap <Leader>bl :ls<cr>:b
 nmap <Leader>tn :tabnew<cr>
 nmap <Leader>o :NERDTree<cr>:OpenBookmark<Space>
 nmap <Leader>v :tabnew<cr>:e ~/.vimrc<cr>
+nmap <Leader>r :set relativenumber!<cr>
 
 nmap qq :q<cr>
 
@@ -96,6 +96,8 @@ vnoremap > >gv
 noremap j gj
 noremap k gk
 
+noremap <S-k> <NOP>
+
 nmap + <C-W>+
 nmap _ <C-W>-
 nmap = <C-W>5>
@@ -106,7 +108,7 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
-set mouse=a
+set mouse=
 set pastetoggle=,pa
 set guicursor=n:blinkon0
 set nocompatible
@@ -146,6 +148,7 @@ set fileencodings=utf-8,cp1251
 set list
 set numberwidth=4
 set number
+set relativenumber
 set laststatus=2
 set shm+=I
 set t_Co=256
@@ -167,6 +170,9 @@ command! -bang Wa wa<bang>
 command! -bang WA wa<bang>
 command! -bang Wq wq<bang>
 command! -bang WQ wq<bang>
+
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 
 au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.jsm setf javascript
