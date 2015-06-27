@@ -16,11 +16,7 @@ Plugin 'motemen/git-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'aperezdc/vim-template'
 Plugin 'ervandew/supertab'
-
-" powerline
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " themes
@@ -51,15 +47,12 @@ let mapleader = ","
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
-let NERDTreeKeepTreeInNewTab=1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_max_height = 15
-let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit=0
-let g:ctrlp_mruf_max = 250
+let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll|DS_Store)$',
