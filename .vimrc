@@ -101,6 +101,7 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
+set autoread
 set mouse=
 set pastetoggle=,pa
 set guicursor=n:blinkon0
