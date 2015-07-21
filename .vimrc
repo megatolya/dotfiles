@@ -20,20 +20,11 @@ Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " themes
-Plugin 'ricardovaleriano/vim-github-theme'
-Plugin 'zeis/vim-kolor'
-Plugin 'xoria256.vim'
 Plugin 'endel/vim-github-colorscheme'
 
 " syntax
-Plugin 'wavded/vim-stylus'
-Plugin 'maksimr/vim-yate'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'juvenn/mustache.vim'
-Plugin 'guileen/vim-node'
-Plugin 'groenewege/vim-less'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -96,15 +87,9 @@ nmap _ <C-W>-
 nmap = <C-W>5>
 nmap - <C-W>5<
 
-nmap <C-h> <C-W>h
-nmap <C-j> <C-W>j
-nmap <C-k> <C-W>k
-nmap <C-l> <C-W>l
-
 set autoread
 set mouse=
 set pastetoggle=,pa
-set guicursor=n:blinkon0
 set nocompatible
 set ttyfast
 set lazyredraw
@@ -169,9 +154,15 @@ autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
 au BufNewFile,BufRead *.js setf javascript
+au BufNewFile,BufRead *.ts setf javascript
+au BufNewFile,BufRead *.ts setf javascript
 au BufNewFile,BufRead *.jsm setf javascript
 au BufNewFile,BufRead *.json setf javascript
 au BufNewFile,BufRead Jakefile setf javascript
+
+au BufNewFile,BufRead *.less setf css
+au BufNewFile,BufRead *.styl setf css
+au BufNewFile,BufRead *.scss setf css
 
 function! ToggleMouse()
     " check if mouse is enabled

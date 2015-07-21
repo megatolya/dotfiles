@@ -26,6 +26,7 @@ alias gtree='git log --graph --oneline --decorate --all'
 alias ps='python -m SimpleHTTPServer'
 alias pss='please python -m SimpleHTTPServer 80'
 alias preview='groff -Tps > /tmp/tmp.ps && open -a Preview /tmp/tmp.ps'
+alias irebase='git rebase --autosquash -i $(git merge-base develop HEAD)'
 
 export PATH=/usr/local/opt
 export PATH=/usr/bin:$PATH
