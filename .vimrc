@@ -9,8 +9,6 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'walm/jshint.vim'
-Plugin 'mileszs/ack.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'motemen/git-vim'
 Plugin 'kien/ctrlp.vim'
