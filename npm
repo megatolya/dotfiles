@@ -1,5 +1,0 @@
-array=(grunt-cli jshint phantomjs qrcode-terminal shower-remote yadisk gist-cli yeoman express bem borschik jshint grunt-cli)
-for package in "${array[@]}"
-do
-    npm install -g $package
-done
