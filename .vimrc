@@ -51,9 +51,6 @@ nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
 
 nmap <Leader>ts :%s/\s\+$//e<CR>
-nmap <Leader>bl :ls<cr>:b
-nmap <Leader>tn :tabnew<cr>
-nmap <Leader>o :NERDTree<cr>:OpenBookmark<Space>
 nmap <Leader>v :tabnew<cr>:e ~/.vimrc<cr>
 nmap <Leader>r :set relativenumber!<cr>
 
