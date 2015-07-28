@@ -84,7 +84,6 @@ nmap - <C-W>5<
 
 set autoread
 set mouse=
-set pastetoggle=,pa
 set nocompatible
 set ttyfast
 set lazyredraw
