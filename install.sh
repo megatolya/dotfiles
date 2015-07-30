@@ -119,7 +119,10 @@ check_requirements () {
     done
 }
 
+
 check_requirements $is_mac
+echo "Changing shell to zsh"
+chsh -s $(which zsh)
 
 link_rc_files
 install_oh_my_zsh $is_mac
