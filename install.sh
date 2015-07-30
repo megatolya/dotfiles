@@ -40,7 +40,7 @@ install_npm_packages () {
 install_brew () {
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
-
+ol
 install_brew_packages () {
     echo "Installing brew packages"
 
@@ -105,7 +105,6 @@ check_requirements () {
         commands=(
             git
             ruby
-            ololo
         )
     else
         commands=(
