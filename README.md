@@ -10,7 +10,7 @@
 
 Запустить
 ```bash
-git clone git@github.com:megatolya/dotfiles.git ~/dotfiles && cd ~ && cd dotfiles && ./install.sh
+git clone https://github.com/megatolya/dotfiles.git ~/dotfiles && cd ~ && cd dotfiles && ./install.sh
 ```
 
 
