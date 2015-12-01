@@ -52,7 +52,6 @@ nnoremap Y y$
 
 nmap <Leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>v :tabnew<cr>:e ~/.vimrc<cr>
-nmap <Leader>r :set relativenumber!<cr>
 
 nmap qq :q<cr>
 
@@ -121,7 +120,6 @@ set fileencodings=utf-8,cp1251
 set list
 set numberwidth=4
 set number
-set relativenumber
 set laststatus=2
 set shm+=I
 set t_Co=256
@@ -144,9 +142,6 @@ command! -bang WA wa<bang>
 command! -bang Wq wq<bang>
 command! -bang WQ wq<bang>
 
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertLeave * :set relativenumber
-
 au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.ts setf javascript
 au BufNewFile,BufRead *.ts setf javascript
@@ -157,16 +152,3 @@ au BufNewFile,BufRead Jakefile setf javascript
 au BufNewFile,BufRead *.less setf css
 au BufNewFile,BufRead *.styl setf css
 au BufNewFile,BufRead *.scss setf css
-
-function! ToggleMouse()
-    " check if mouse is enabled
-    if &mouse == 'a'
-        " disable mouse
-        set mouse=
-    else
-        " enable mouse everywhere
-        set mouse=a
-    endif
-endfunc
-
-nmap <Leader>m :call ToggleMouse()<cr>
