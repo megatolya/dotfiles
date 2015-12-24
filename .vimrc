@@ -53,8 +53,6 @@ nnoremap Y y$
 nmap <Leader>ts :%s/\s\+$//e<CR>
 nmap <Leader>v :tabnew<cr>:e ~/.vimrc<cr>
 
-nmap qq :q<cr>
-
 nmap <Tab> gt
 nmap <S-Tab> gT
 
