@@ -44,8 +44,9 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias e='vim'
     export LC_CTYPE="ru_RU.utf8"
     export DEBFULLNAME="Anatoly Ostrovsky"
+    export DEBEMAIL=megatolya@yandex-team.ru
     export EMAIL=megatolya@yandex-team.ru
-    alias dch='dch --distributor debian'
+    alias dch='dch --vendor debian'
     alias debuild='debuild --no-lintian'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     source $(brew --prefix nvm)/nvm.sh
