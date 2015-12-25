@@ -56,3 +56,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias e='mvim'
 fi
 
+
+# added by travis gem
+[ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh

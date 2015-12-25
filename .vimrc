@@ -6,11 +6,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " appearance
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'motemen/git-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
@@ -43,26 +42,17 @@ let g:ctrlp_max_height = 15
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules|tmp)$',
   \ 'file': '\v\.(exe|so|dll|DS_Store)$',
   \ }
 
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
 
-nmap <Leader>ts :%s/\s\+$//e<CR>
-nmap <Leader>v :tabnew<cr>:e ~/.vimrc<cr>
-
-nmap <Tab> gt
-nmap <S-Tab> gT
-
-nmap <S-l> <Plug>GitGutterNextHunk
-nmap <S-h> <Plug>GitGutterPrevHunk
-
-nnoremap <silent> <Esc><Esc> :nohlsearch <CR>
+nnoremap <silent> <Esc><Esc> :nohlsearch <cr>
 
 nmap <S-Space> :NERDTreeFind<cr>
-nmap <Space> :NERDTreeToggle<CR>
+nmap <Space> :NERDTreeToggle<cr>
 
 nmap * *N
 
@@ -145,7 +135,6 @@ au BufNewFile,BufRead *.ts setf javascript
 au BufNewFile,BufRead *.ts setf javascript
 au BufNewFile,BufRead *.jsm setf javascript
 au BufNewFile,BufRead *.json setf javascript
-au BufNewFile,BufRead Jakefile setf javascript
 
 au BufNewFile,BufRead *.less setf css
 au BufNewFile,BufRead *.styl setf css
