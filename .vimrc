@@ -11,7 +11,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}

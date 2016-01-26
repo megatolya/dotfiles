@@ -32,10 +32,11 @@ export PATH=/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/share/npm/lib/node_modules/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/opt/nodejs/4/bin/:$PATH
 
 export NVM_DIR=~/.nvm
 
-export GREP_OPTIONS="-R --exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components"
+export GREP_OPTIONS="-R --exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=app/build"
 
 zstyle ':urlglobber' url-other-schema
 
