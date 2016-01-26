@@ -64,6 +64,8 @@ noremap k gk
 
 noremap <S-k> <NOP>
 
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+
 nmap + <C-W>+
 nmap _ <C-W>-
 nmap = <C-W>5>
