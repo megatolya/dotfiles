@@ -107,8 +107,8 @@ set noswapfile
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set list
-set numberwidth=4
-set number
+"set numberwidth=4
+"set number
 set laststatus=2
 set shm+=I
 set t_Co=256

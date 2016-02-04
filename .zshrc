@@ -58,5 +58,28 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 
+tmuxify() {
+    tmux new-session -ds placeholder 2>/dev/null
+    dirname=$(basename $PWD)
+    sessions=$(tmux list-sessions -F "#{session_name}")
+    tmux kill-session -t placeholder
+    new_session=true
+
+    for session in $(tmux list-sessions -F "#{session_name}"); do
+        if [ $session = $dirname ]
+        then
+            new_session=false
+        fi
+    done
+
+    if [ $new_session = true ]
+    then
+        tmux new-session -s $dirname
+    else
+        tmux attach -t ${dirname}
+    fi
+}
+
+
 # added by travis gem
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
