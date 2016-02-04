@@ -59,10 +59,8 @@ fi
 
 
 tmuxify() {
-    tmux new-session -ds placeholder 2>/dev/null
     dirname=$(basename $PWD)
-    sessions=$(tmux list-sessions -F "#{session_name}")
-    tmux kill-session -t placeholder
+    sessions=$(tmux list-sessions -F "#{session_name}" 2>/dev/null)
     new_session=true
 
     for session in $(tmux list-sessions -F "#{session_name}"); do
