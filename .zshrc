@@ -19,6 +19,7 @@ alias grm='git rm $(git ls-files --deleted)'
 alias pie='node -p -i -e'
 alias pss='please python -m SimpleHTTPServer 80'
 alias irebase='git rebase --autosquash -i $(git merge-base develop HEAD)'
+alias gti='git'
 
 export PATH=/usr/local/opt
 export PATH=/usr/bin:$PATH
@@ -36,7 +37,7 @@ export PATH=/opt/nodejs/4/bin/:$PATH
 
 export NVM_DIR=~/.nvm
 
-export GREP_OPTIONS="-R --exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=app/build"
+export GREP_OPTIONS="-R --exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=app/build --exclude=*.map"
 
 zstyle ':urlglobber' url-other-schema
 
@@ -57,6 +58,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias e='mvim'
 fi
 
+
+unstash() {
+    git stash show -p stash@{$1} | git apply -R
+}
 
 tmuxify() {
     dirname=$(basename $PWD)

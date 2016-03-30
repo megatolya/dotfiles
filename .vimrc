@@ -13,14 +13,9 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " themes
 Plugin 'endel/vim-github-colorscheme'
-
-" syntax
-Plugin 'digitaltoad/vim-jade'
-Plugin 'juvenn/mustache.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,8 +45,8 @@ nnoremap Y y$
 
 nnoremap <silent> <Esc><Esc> :nohlsearch <cr>
 
-nmap <S-Space> :NERDTreeFind<cr>
 nmap <Space> :NERDTreeToggle<cr>
+nmap f<Space> :NERDTreeFind<cr>
 
 nmap * *N
 
@@ -107,8 +102,6 @@ set noswapfile
 set encoding=utf-8
 set fileencodings=utf-8,cp1251
 set list
-"set numberwidth=4
-"set number
 set laststatus=2
 set shm+=I
 set t_Co=256
