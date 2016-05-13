@@ -20,6 +20,7 @@ alias pie='node -p -i -e'
 alias pss='please python -m SimpleHTTPServer 80'
 alias irebase='git rebase --autosquash -i $(git merge-base develop HEAD)'
 alias gti='git'
+alias glist="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 
 export PATH=/usr/local/opt
 export PATH=/usr/bin:$PATH
