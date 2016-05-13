@@ -38,7 +38,7 @@ export PATH=/opt/nodejs/4/bin/:$PATH
 
 export NVM_DIR=~/.nvm
 
-export GREP_OPTIONS="-R --exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=app/build --exclude=*.map"
+export GREP_OPTIONS="--exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=app/build --exclude=*.map"
 
 zstyle ':urlglobber' url-other-schema
 
