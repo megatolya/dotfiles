@@ -13,3 +13,8 @@
 [alias]
     st = status
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[push]
+      default = current
+
+[hub]
+	host = github.yandex-team.ru

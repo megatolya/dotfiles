@@ -13,6 +13,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
+Plugin 'easymotion/vim-easymotion'
 
 " themes
 Plugin 'endel/vim-github-colorscheme'
@@ -64,6 +65,11 @@ nmap + <C-W>+
 nmap _ <C-W>-
 nmap = <C-W>5>
 nmap - <C-W>5<
+
+map f <Nop>
+nmap f <Nop>
+map  f <Plug>(easymotion-bd-f)
+nmap f <Plug>(easymotion-overwin-f)
 
 set autoread
 set mouse=

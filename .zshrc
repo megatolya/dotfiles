@@ -85,5 +85,20 @@ tmuxify() {
 }
 
 
+gpr() {
+    repo_path_with_host=$(git config --get remote.origin.url | sed s/^http[s]:\\/\\///g | sed s/^git@//g | sed s/:/\\//g | sed s/\.git$//g)
+    repo_host=$(echo $repo_path_with_host | sed -Ee "s/.*\/(.+\/.+)/\1/g")
+    repo_url=https://${repo_path_with_host}
+    branch=`git rev-parse --abbrev-ref HEAD`
+    url=${repo_url}/tree/${branch}
+    echo url=${url}
+    relative_branch=$(curl -i ${url} 2>&1 |\
+        grep pull-request-link |\
+        sed s/.*href=\"//g | sed s/\".*//)
+    echo $relative_branch
+    echo "https://github.yandex-team.ru"${relative_branch}
+}
+
+
 # added by travis gem
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
