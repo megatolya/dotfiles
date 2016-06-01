@@ -102,3 +102,5 @@ gpr() {
 
 # added by travis gem
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
+
+alias composer="php ~/composer.phar"
