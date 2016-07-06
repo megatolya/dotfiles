@@ -21,6 +21,7 @@ alias pss='please python -m SimpleHTTPServer 80'
 alias irebase='git rebase --autosquash -i $(git merge-base develop HEAD)'
 alias gti='git'
 alias glist="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias composer="php ~/composer.phar"
 
 export PATH=/usr/local/opt
 export PATH=/usr/bin:$PATH
@@ -103,4 +104,4 @@ gpr() {
 # added by travis gem
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
 
-alias composer="php ~/composer.phar"
+eval "$(docker-machine env default)"

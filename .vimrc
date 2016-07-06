@@ -14,6 +14,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'mileszs/ack.vim'
 
 " themes
 Plugin 'endel/vim-github-colorscheme'
@@ -31,15 +32,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_max_height = 15
-let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules|tmp)$',
-  \ 'file': '\v\.(exe|so|dll|DS_Store)$',
-  \ }
+let g:ctrlp_cmd = 'CtrlPMRUFiles'
 
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
