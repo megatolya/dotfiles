@@ -104,4 +104,4 @@ gpr() {
 # added by travis gem
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
 
-eval "$(docker-machine env default)"
+#eval "$(docker-machine env default)"
