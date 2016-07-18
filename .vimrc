@@ -30,9 +30,11 @@ let mapleader = ","
 
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
-let NERDTreeQuitOnOpen=1 " Quit on opening files from the tree
+let NERDTreeQuitOnOpen=1
 
-let g:ctrlp_cmd = 'CtrlPMRUFiles'
+let NERDSpaceDelims=1
+
+let ctrlp_cmd = 'CtrlPMRUFiles'
 
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
