@@ -1,25 +1,26 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall
+    autocmd VimEnter * qall
+endif
+
+call plug#begin()
 
 " appearance
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ervandew/supertab'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'ervandew/supertab'
+Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'endel/vim-github-colorscheme'
 
-" themes
-Plugin 'endel/vim-github-colorscheme'
-
-call vundle#end()            " required
+call plug#end()
 filetype plugin indent on    " required
 
 syntax on
@@ -34,8 +35,6 @@ let NERDTreeQuitOnOpen=1
 
 let NERDSpaceDelims=1
 
-let ctrlp_cmd = 'CtrlPMRUFiles'
-
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap Y y$
 
@@ -43,6 +42,8 @@ nnoremap <silent> <Esc><Esc> :nohlsearch <cr>
 
 nmap <Space> :NERDTreeToggle<cr>
 nmap f<Space> :NERDTreeFind<cr>
+
+nmap <C-t> :Files<cr>
 
 nmap * *N
 
@@ -61,11 +62,6 @@ nmap _ <C-W>-
 nmap = <C-W>5>
 nmap - <C-W>5<
 
-map f <Nop>
-nmap f <Nop>
-map  f <Plug>(easymotion-bd-f)
-nmap f <Plug>(easymotion-overwin-f)
-
 set autoread
 set mouse=
 set nocompatible
@@ -77,11 +73,8 @@ set nocursorcolumn
 set nocursorline
 set wrap
 set linebreak
-set tabstop=4
 set backspace=indent,eol,start
 set autoindent
-set shiftwidth=4
-set softtabstop=4
 set shiftround
 set ignorecase
 set smartcase
@@ -113,7 +106,10 @@ set undofile
 set showcmd
 set showmode
 set shortmess=AItWsoO
-set colorcolumn=82
+set colorcolumn=100
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 
 command! -bang E e<bang>
 command! -bang Q q<bang>

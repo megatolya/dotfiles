@@ -6,6 +6,7 @@ set keymap vi-command
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 plugins=(git bower brew battery node npm nyan docker gem gitfast gradle jsontools pip tmux web-search)
+bindkey -v
 
 export TERM="xterm-256color"
 export ZSH_THEME='my'
@@ -35,9 +36,11 @@ export PATH=/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/share/npm/lib/node_modules/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/opt/nodejs/4/bin/:$PATH
+export PATH=/opt/nodejs/4/bin:$PATH
 
 export NVM_DIR=~/.nvm
+
+export ANDROID_HOME=~/Library/Android/sdk
 
 export GREP_OPTIONS="--exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=app/build --exclude=*.map"
 
@@ -105,3 +108,5 @@ gpr() {
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
 
 #eval "$(docker-machine env default)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
