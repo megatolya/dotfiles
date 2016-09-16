@@ -8,7 +8,6 @@ endif
 
 call plug#begin()
 
-" appearance
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
@@ -32,26 +31,22 @@ let mapleader = ","
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen=1
-
 let NERDSpaceDelims=1
-
-nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
-
-nnoremap <silent> <Esc><Esc> :nohlsearch <cr>
-
-nmap <Space> :NERDTreeToggle<cr>
-nmap f<Space> :NERDTreeFind<cr>
-
-nmap <C-t> :Files<cr>
-
-nmap * *N
-
-vnoremap < <gv
-vnoremap > >gv
 
 noremap j gj
 noremap k gk
 
+nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
+nnoremap <silent> <Esc><Esc> :nohlsearch <cr>
+
+nmap <Space> :NERDTreeToggle<cr>
+nmap f<Space> :NERDTreeFind<cr>
+nmap <C-t> :Files<cr>
+
+vnoremap < <gv
+vnoremap > >gv
+
+nmap * *N
 nmap + <C-W>+
 nmap _ <C-W>-
 nmap = <C-W>5>
@@ -93,8 +88,7 @@ set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
 set synmaxcol=200
 set undodir=~/.vim/undos
 set undofile
-set showcmd
-set showmode
+set noshowmode
 set shortmess=AItWsoO
 set colorcolumn=100
 set shiftwidth=4
