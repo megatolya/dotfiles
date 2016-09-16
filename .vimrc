@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -21,7 +21,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'endel/vim-github-colorscheme'
 
 call plug#end()
-filetype plugin indent on    " required
+filetype plugin indent on
 
 syntax on
 
@@ -36,7 +36,6 @@ let NERDTreeQuitOnOpen=1
 let NERDSpaceDelims=1
 
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
-nnoremap Y y$
 
 nnoremap <silent> <Esc><Esc> :nohlsearch <cr>
 
@@ -53,24 +52,16 @@ vnoremap > >gv
 noremap j gj
 noremap k gk
 
-noremap <S-k> <NOP>
-
-cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
-
 nmap + <C-W>+
 nmap _ <C-W>-
 nmap = <C-W>5>
 nmap - <C-W>5<
 
 set autoread
-set mouse=
-set nocompatible
 set ttyfast
 set lazyredraw
 set scrolloff=15
 set sidescrolloff=15
-set nocursorcolumn
-set nocursorline
 set wrap
 set linebreak
 set backspace=indent,eol,start
@@ -85,9 +76,8 @@ set hlsearch
 set nohidden
 set incsearch
 set undolevels=1000
-set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildmenu
-set wildmode=full
+set wildmode=list:full
 set hidden
 set visualbell
 set noerrorbells
@@ -110,23 +100,3 @@ set colorcolumn=100
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-
-command! -bang E e<bang>
-command! -bang Q q<bang>
-command! -bang W w<bang>
-command! -bang QA qa<bang>
-command! -bang Qa qa<bang>
-command! -bang Wa wa<bang>
-command! -bang WA wa<bang>
-command! -bang Wq wq<bang>
-command! -bang WQ wq<bang>
-
-au BufNewFile,BufRead *.js setf javascript
-au BufNewFile,BufRead *.ts setf javascript
-au BufNewFile,BufRead *.ts setf javascript
-au BufNewFile,BufRead *.jsm setf javascript
-au BufNewFile,BufRead *.json setf javascript
-
-au BufNewFile,BufRead *.less setf css
-au BufNewFile,BufRead *.styl setf css
-au BufNewFile,BufRead *.scss setf css

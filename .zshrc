@@ -6,7 +6,6 @@ set keymap vi-command
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
 plugins=(git bower brew battery node npm nyan docker gem gitfast gradle jsontools pip tmux web-search)
-bindkey -v
 
 export TERM="xterm-256color"
 export ZSH_THEME='my'
@@ -42,13 +41,12 @@ export NVM_DIR=~/.nvm
 
 export ANDROID_HOME=~/Library/Android/sdk
 
-export GREP_OPTIONS="--exclude-dir=app/pages --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=app/build --exclude=*.map"
+export GREP_OPTIONS="--exclude=*.map"
 
 zstyle ':urlglobber' url-other-schema
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export PATH=~/www/kinopoisk/./node_modules/.bin:$PATH
-    alias e='vim'
     export LC_CTYPE="ru_RU.utf8"
     export DEBFULLNAME="Anatoly Ostrovsky"
     export DEBEMAIL=megatolya@yandex-team.ru
@@ -60,7 +58,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/Users/megatolya/Library/Android/sdk/platform-tools:$PATH
     export PATH=/Users/megatolya/Library/Android/sdk/tools:$PATH
     alias kino='ssh dev1.kinopoisk.ru -t "cd www/kinopoisk; zsh --login"'
-    alias e='mvim'
 fi
 
 
