@@ -1,16 +1,6 @@
-Скачать:
-
-[Spectacle](http://spectacleapp.com/)
-
-[TotalSpaces](http://totalspaces.binaryage.com)
-
-[Шрифт для консоли](https://github.com/Lokaltog/powerline-fonts)
-
-[Powerline для консоли](https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git)
-
-Запустить
+# Installation
 ```bash
-git clone https://github.com/megatolya/dotfiles.git ~/dotfiles && cd ~ && cd dotfiles && ./install.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/megatolya/dotfiles/master/first-install.sh)"
 ```
 
 
