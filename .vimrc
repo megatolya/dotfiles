@@ -51,7 +51,6 @@ nmap + <C-W>+
 nmap _ <C-W>-
 nmap = <C-W>5>
 nmap - <C-W>5<
-
 set autoread
 set ttyfast
 set lazyredraw
@@ -93,4 +92,8 @@ set shortmess=AItWsoO
 set colorcolumn=100
 set shiftwidth=4
 set softtabstop=4
+set history=1000
 set tabstop=4
+set ruler
+
+autocmd FileType javascript setlocal iskeyword+=-
