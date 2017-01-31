@@ -22,8 +22,6 @@ Plug 'endel/vim-github-colorscheme'
 call plug#end()
 filetype plugin indent on
 
-syntax on
-
 colorscheme github
 
 let mapleader = ","
@@ -99,3 +97,4 @@ set tabstop=4
 set ruler
 
 autocmd FileType javascript setlocal iskeyword+=-
+syntax on
