@@ -1,1 +1,1 @@
-ffmpeg -f avfoundation -video_size 1280x720 -framerate 30 -i "0" -vframes 1 ~/post-commit-photos/$(date "+%Y%m%d-%H%M%S").jpg
+ffmpeg -f avfoundation -video_size 1280x720 -framerate 30 -i "0" -vframes 1 ~/post-commit-photos/$(date "+%Y-%a-m%d-%H:%M:%S").jpg > /dev/null
