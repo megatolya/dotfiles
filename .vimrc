@@ -39,10 +39,6 @@ noremap k gk
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
 nnoremap <silent> <Esc><Esc> :nohlsearch <cr>
 
-nmap <Space> :NERDTreeToggle<cr>
-nmap f<Space> :NERDTreeFind<cr>
-nmap <C-t> :Files<cr>
-
 vnoremap < <gv
 vnoremap > >gv
 
@@ -51,6 +47,14 @@ nmap + <C-W>+
 nmap _ <C-W>-
 nmap = <C-W>5>
 nmap - <C-W>5<
+nmap <Space> :NERDTreeToggle<cr>
+nmap f<Space> :NERDTreeFind<cr>
+nmap <C-t> :Files<cr>
+
+nnoremap <F1> :setlocal number!<cr>
+nnoremap <F2> :setlocal relativenumber!<cr>
+nnoremap <F3> :setlocal paste!<cr>
+
 set autoread
 set ttyfast
 set lazyredraw

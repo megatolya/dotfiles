@@ -36,8 +36,6 @@ export PATH=/usr/local/share/npm/lib/node_modules/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/opt/nodejs/4/bin:$PATH
 
-export NVM_DIR=~/.nvm
-
 export ANDROID_HOME=~/Library/Android/sdk
 
 export GREP_OPTIONS="--exclude=*.map"
@@ -106,3 +104,4 @@ gpr() {
 #eval "$(docker-machine env default)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
