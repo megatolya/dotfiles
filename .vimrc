@@ -13,10 +13,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ervandew/supertab'
-Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
 Plug 'endel/vim-github-colorscheme'
 
 call plug#end()
