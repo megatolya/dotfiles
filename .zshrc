@@ -5,7 +5,7 @@ set keymap vi-command
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
-plugins=(git brew node npm docker gem gitfast tmux)
+plugins=(docker gitfast ssh-agent)
 
 export TERM="xterm-256color"
 export ZSH_THEME='my'
@@ -100,6 +100,8 @@ gpr() {
 
 # added by travis gem
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
+
+eval "$(pyenv init -)"
 
 #eval "$(docker-machine env default)"
 
