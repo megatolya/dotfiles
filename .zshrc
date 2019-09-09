@@ -38,8 +38,6 @@ export PATH=/opt/nodejs/4/bin:$PATH
 
 export ANDROID_HOME=~/Library/Android/sdk
 
-export GREP_OPTIONS="--exclude=*.map"
-
 zstyle ':urlglobber' url-other-schema
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
