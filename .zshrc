@@ -99,9 +99,11 @@ gpr() {
 # added by travis gem
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
 
-eval "$(pyenv init -)"
+ssh-add ~/.ssh/id_rsa &>/dev/null
 
 #eval "$(docker-machine env default)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(pyenv init -)"
