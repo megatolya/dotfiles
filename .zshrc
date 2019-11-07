@@ -5,7 +5,7 @@ set keymap vi-command
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
-plugins=(docker gitfast ssh-agent)
+plugins=(docker gitfast)
 
 export TERM="xterm-256color"
 export ZSH_THEME='my'
