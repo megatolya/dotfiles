@@ -41,24 +41,8 @@ export ANDROID_HOME=~/Library/Android/sdk
 zstyle ':urlglobber' url-other-schema
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    export PATH=~/www/kinopoisk/./node_modules/.bin:$PATH
-    export LC_CTYPE="ru_RU.utf8"
-    export DEBFULLNAME="Anatoly Ostrovsky"
-    export DEBEMAIL=megatolya@yandex-team.ru
-    export EMAIL=megatolya@yandex-team.ru
-    alias dch='dch --vendor debian'
-    alias debuild='debuild --no-lintian'
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    source $(brew --prefix nvm)/nvm.sh
-    export PATH=/Users/megatolya/Library/Android/sdk/platform-tools:$PATH
-    export PATH=/Users/megatolya/Library/Android/sdk/tools:$PATH
-    alias kino='ssh dev1.kinopoisk.ru -t "cd www/kinopoisk; zsh --login"'
+    export PS1="$(hostname) ${PS1}"
 fi
-
-
-unstash() {
-    git stash show -p stash@{$1} | git apply -R
-}
 
 tmuxify() {
     dirname=$(basename $PWD)
@@ -81,20 +65,6 @@ tmuxify() {
 }
 
 
-gpr() {
-    repo_path_with_host=$(git config --get remote.origin.url | sed s/^http[s]:\\/\\///g | sed s/^git@//g | sed s/:/\\//g | sed s/\.git$//g)
-    repo_host=$(echo $repo_path_with_host | sed -Ee "s/.*\/(.+\/.+)/\1/g")
-    repo_url=https://${repo_path_with_host}
-    branch=`git rev-parse --abbrev-ref HEAD`
-    url=${repo_url}/tree/${branch}
-    echo url=${url}
-    relative_branch=$(curl -i ${url} 2>&1 |\
-        grep pull-request-link |\
-        sed s/.*href=\"//g | sed s/\".*//)
-    echo $relative_branch
-    echo "https://github.yandex-team.ru"${relative_branch}
-}
-
 
 # added by travis gem
 [ -f /Users/megatolya/.travis/travis.sh ] && source /Users/megatolya/.travis/travis.sh
@@ -104,6 +74,13 @@ ssh-add ~/.ssh/id_rsa &>/dev/null
 #eval "$(docker-machine env default)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 eval "$(pyenv init -)"
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/Users/megatolya/yandex-cloud/path.bash.inc' ]; then source '/Users/megatolya/yandex-cloud/path.bash.inc'; fi
+
