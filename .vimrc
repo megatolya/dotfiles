@@ -16,9 +16,13 @@ Plug 'ervandew/supertab'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'endel/vim-github-colorscheme'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 filetype plugin indent on
+
+cnoreabbrev Ack Ack!
+nnoremap ,a :Ack!<Space>
 
 colorscheme github
 
@@ -99,4 +103,4 @@ set tabstop=4
 set ruler
 
 autocmd FileType javascript setlocal iskeyword+=-
-syntax on
+syntax off
