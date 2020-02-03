@@ -84,3 +84,6 @@ eval "$(pyenv init -)"
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f '/Users/megatolya/yandex-cloud/path.bash.inc' ]; then source '/Users/megatolya/yandex-cloud/path.bash.inc'; fi
 
+if test "$SSH_AUTH_SOCK" ; then
+  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+fi
