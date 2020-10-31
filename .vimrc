@@ -17,6 +17,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'endel/vim-github-colorscheme'
 Plug 'mileszs/ack.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'neoclide/jsonc.vim'
 
 call plug#end()
 filetype plugin indent on

@@ -87,3 +87,7 @@ if [ -f '/Users/megatolya/yandex-cloud/path.bash.inc' ]; then source '/Users/meg
 if test "$SSH_AUTH_SOCK" ; then
   ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
 fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/megatolya/yandex-cloud/completion.zsh.inc' ]; then source '/Users/megatolya/yandex-cloud/completion.zsh.inc'; fi
+
