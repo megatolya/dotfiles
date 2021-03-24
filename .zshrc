@@ -1,4 +1,5 @@
-ZSH=$HOME/.oh-my-zsh
+export ZSH_DISABLE_COMPFIX=1
+export ZSH=$HOME/.oh-my-zsh
 
 set editing-mode vi
 set keymap vi-command
@@ -35,6 +36,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/share/npm/lib/node_modules/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/opt/nodejs/4/bin:$PATH
+export PATH=/usr/local/share/dotnet:$PATH
 
 export ANDROID_HOME=~/Library/Android/sdk
 
@@ -78,16 +80,4 @@ ssh-add ~/.ssh/id_rsa &>/dev/null
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-eval "$(pyenv init -)"
-
-# The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/Users/megatolya/yandex-cloud/path.bash.inc' ]; then source '/Users/megatolya/yandex-cloud/path.bash.inc'; fi
-
-if test "$SSH_AUTH_SOCK" ; then
-  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
-fi
-
-# The next line enables shell command completion for yc.
-if [ -f '/Users/megatolya/yandex-cloud/completion.zsh.inc' ]; then source '/Users/megatolya/yandex-cloud/completion.zsh.inc'; fi
 

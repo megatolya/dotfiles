@@ -19,6 +19,8 @@ Plug 'endel/vim-github-colorscheme'
 Plug 'mileszs/ack.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/jsonc.vim'
+Plug 'tasn/vim-tsx'
+Plug 'prettier/vim-prettier'
 
 call plug#end()
 filetype plugin indent on
